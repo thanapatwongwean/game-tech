@@ -1,7 +1,8 @@
 <!-- CONTENT -->
 <main>
     <h2>Register</h2>
-    <?= form_open('form', 'class=""'); ?>
+    <?php echo validation_errors('<div>', '</div>'); ?>
+    <?= form_open('register', 'class=""'); ?>
     <div>
         <?php
         echo form_label('Username:', 'username');
@@ -13,7 +14,14 @@
         <?php
         echo form_label('Password:', 'password');
         $data = ['name' => 'password', 'id' => 'password','cols' => '50','rows' => '1'];
-        echo form_textarea($data);
+        echo form_password($data);
+        ?>
+    </div>
+    <div>
+        <?php
+        echo form_label('Confirm Password:', 'password');
+        $data = ['name' => 'passwordConf', 'id' => 'passwordConf','cols' => '50','rows' => '1'];
+        echo form_password($data);
         ?>
     </div>
     <div>
