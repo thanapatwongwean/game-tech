@@ -1,6 +1,10 @@
 <!-- CONTENT -->
 <main>
+<div class="col-lg-6">
+	<div class="box">
     <h2>Register</h2>
+	<p class="lead">Not our customer yet?</p>
+    <p>Let's join us to try or get some cool gaming gadget or IT stuff!</p>
     <?php echo validation_errors('<div>', '</div>'); ?>
     <?= form_open('register', 'class=""'); ?>
     <div>
@@ -56,6 +60,22 @@
         <?= form_submit('submit', 'Submit'); ?>
         <?= form_reset('reset', 'Reset'); ?>
     </div>
+
     <?= form_close(); ?>
+</div>
+</div>
 </main>
 <!-- /CONTENT -->
+
+<div class="col-lg-6">
+	<div class="box">
+test css
+	<div class="form-group">
+     <label for="name">Username</label>
+      <input id="name" type="text" class="form-control">
+     </div>
+	<div class="text-center">
+        <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i>Submit</button>
+    </div>
+</div>
+</div>
