@@ -7,13 +7,14 @@ class Register extends CI_Controller{
     public function __construct()
     {
         parent::__construct();
-        // Load url helper
+        // Load [form,url] helper
         $this->load->helper(['form','url']);
     }
 
     public function index(){
+        // Load form validation
         $this->load->library('form_validation');
-
+        // set validation rules
         $this->form_validation->set_rules('username', 'username','required | is_unique[user.username]',
             array(
             'required'      => 'Username is required',
@@ -46,16 +47,19 @@ class Register extends CI_Controller{
             $this->load->view('form_register');
             $this->load->view('footer');
         } else {
+            // load user_model
             $this->load->model('user_model');
+            // Get the  data
             $submit_data['name'] = $this->input->post('name', TRUE);
             $submit_data['password'] = $this->input->post('password', TRUE);
             $submit_data['address'] = $this->input->post('address', TRUE);
             $submit_data['phone'] = $this->input->post('phone', TRUE);
             $submit_data['email'] = $this->input->post('email', TRUE);
             if ($this->user_model->insert_data($submit_data)) {
+                // redirect to home
                 redirect('/');
             } else {
-
+                // redirect register
                 redirect('/register');
             }
         }
