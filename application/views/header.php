@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
             <div class="col-lg-6 text-center text-lg-right">
               <ul class="menu list-inline mb-0">
                 <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                <li class="list-inline-item"><a href="#">Register</a></li>
+                <li class="list-inline-item"><a href="<?= base_url('register'); ?>">Register</a></li>
               </ul>
             </div>
           </div>
@@ -216,3 +216,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
         </div>
       </div>
     </header>
+    <div id="all">
+        <div id="content">
+            <div class="container">
