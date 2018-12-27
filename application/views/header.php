@@ -52,19 +52,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                 <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
               </div>
               <div class="modal-body">
-                <form action="customer-orders.html" method="post">
+                <form action="href="<?= base_url('home/login'); ?>" method="post">
                   <div class="form-group">
-                    <input id="email-modal" type="text" placeholder="email" class="form-control">
+                    <input id="email" type="text" placeholder="email" class="form-control">
                   </div>
                   <div class="form-group">
-                    <input id="password-modal" type="password" placeholder="password" class="form-control">
+                    <input id="password" type="password" placeholder="password" class="form-control">
                   </div>
                   <p class="text-center">
                     <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
                   </p>
                 </form>
                 <p class="text-center text-muted">Not registered yet?</p>
-                <p class="text-center text-muted"><a href="#"><strong>Register now</strong></a>! to take a look with our GamingTech!</p>
+                <p class="text-center text-muted"><a href="<?= base_url('register'); ?>"><strong>Register now</strong></a>! to take a look with our GamingTech!</p>
               </div>
             </div>
           </div>

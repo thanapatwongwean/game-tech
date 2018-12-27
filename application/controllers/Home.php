@@ -18,4 +18,21 @@ class Home extends CI_Controller {
 
     }
 
+    public function login(){
+        $this->load->library('session');
+        $this->load->model('user_model');
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
+
+        if($this->user_model->check_user($email,$password)){
+            $data = $this->user_model->getUserData($email);
+            $this->session->set_userdata($data);
+            redirect('/');
+        }
+        else{
+            $this->form_validation->set_message('login', 'Incorrect email or password.');
+            redirect('/');
+        }
+
+    }
 }
