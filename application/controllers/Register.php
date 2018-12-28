@@ -40,7 +40,7 @@ class Register extends CI_Controller{
             if ($this->user_model->create_user($submit_data)) {
                 redirect('/');
             } else {
-                redirect('register');
+
             }
 
         }// Get the  data

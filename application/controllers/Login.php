@@ -1,24 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
-
+class Login extends CI_Controller
+{
     public function __construct()
     {
         parent::__construct();
         // Load url helper
         $this->load->helper('url');
     }
-
     public function index(){
-        //load view
-        $this->load->view('header');
-        $this->load->view('content');
-        $this->load->view('footer');
-
-    }
-
-    /*public function login(){
         $this->load->library('form_validation');
         $this->load->model('user_model');
         $this->form_validation->set_rules('email', 'email', 'required');
@@ -27,11 +18,8 @@ class Home extends CI_Controller {
         $email = $this->input->post('email');
         $password = $this->input->post('password');
 
-        if($this->form_validation->run()){
-            $this->load->model('user_model');
-
+        if($this->form_validation->run()) {
             if($this->user_model->can_login($email,$password)){
-
                 $this->session->user_data('email',$email);
                 $this->session->user_data('username',$this->user_model->getUsername($this->session->email));
                 $this->session->user_data('address',$this->user_model->getAddeess($this->session->username));
@@ -39,22 +27,15 @@ class Home extends CI_Controller {
                 $this->session->user_data('phone',$this->user_model->getPhone($this->session->username));
                 $this->session->user_data('logged_in','1');
                 redirect('/','refresh');
-
             }
             else{
                 $this->session->set_flashdata('error', 'Incorrect email or password.');
                 redirect('/');
             }
+
         }
         $this->session->set_flashdata('error',validation_errors());
         redirect('/');
-    }*/
-
-    /*public function logout(){
-        if(!$this->session->logged_in){
-            redirect(base_url());
-        }
-        $this->session->sess_destroy();
-        redirect('/');
-    }*/
+    }
 }
+

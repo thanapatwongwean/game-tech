@@ -13,10 +13,11 @@ class User_model extends CI_Model{
         return $this->db->insert('user', $data);
     }
 
-    public function login($email, $password)
+    public function can_login($email, $password)
     {
         $this->db->where('email', $email);
-        $datas = $this->db->get('users');
+        $datas = $this->db->get('user');
+        print_r($datas);
         if ($datas->num_rows() > 0) {
             $data = $datas->row();
             $hash = $data->password;
@@ -26,6 +27,8 @@ class User_model extends CI_Model{
         }
         return FALSE;
     }
+
+
     public function getUsername($email){
         $this->db->from('user');
         $this->db->where('email',$email);

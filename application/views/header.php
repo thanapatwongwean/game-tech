@@ -41,9 +41,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
               <ul class="menu list-inline mb-0">
                   <?php if($this->session->logged_in): ?>
                       <li class="list-inline-item"><a href="#">Setting</a></li>
-                      <li class="list-inline-item"><a href="#">Logout</a></li>
+                      <li class="list-inline-item"><a href="<?= base_url('logout');?>">Logout</a></li>
                   <?php else: ?>
-                    <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                      <?php echo '<div style ="color:red;"><strong>'.$this->session->flashdata("error").'</strong></div><br>';?>
+                      <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
                     <li class="list-inline-item"><a href="<?= base_url('register'); ?>">Register</a></li>
                   <?php endif; ?>
               </ul>
@@ -58,12 +59,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                 <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
               </div>
               <div class="modal-body">
-                <form action="href="<?= base_url('home/login'); ?>" method="post">
+                <form action="<?= base_url('login'); ?>" method="post">
                   <div class="form-group">
-                    <input id="email" type="text" placeholder="email" class="form-control">
+                    <input name="email" id="email" type="text" placeholder="email" class="form-control">
                   </div>
                   <div class="form-group">
-                    <input id="password" type="password" placeholder="password" class="form-control">
+                    <input name="password" id="password" type="password" placeholder="password" class="form-control">
                   </div>
                   <p class="text-center">
                     <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
@@ -80,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
 
       </div>
       <nav class="navbar navbar-expand-lg">
-        <div class="container"><a href="index.html" class="navbar-brand home"><img src="public/images/logo.png" alt="GamingTech logo" class="d-none d-md-inline-block"><img src="public/images/logo-small.png" alt="GamingTech logo" class="d-inline-block d-md-none"><span class="sr-only">Go to homepage</span></a>
+        <div class="container"><a href="<?= base_url();?>" class="navbar-brand home"><img src="public/images/logo.png" alt="GamingTech logo" class="d-none d-md-inline-block"><img src="public/images/logo-small.png" alt="GamingTech logo" class="d-inline-block d-md-none"><span class="sr-only">Go to homepage</span></a>
           <div class="navbar-buttons">
             <button type="button" data-toggle="collapse" data-target="#navigation" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
             <button type="button" data-toggle="collapse" data-target="#search" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></button>
