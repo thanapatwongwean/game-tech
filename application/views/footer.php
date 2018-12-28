@@ -9,7 +9,7 @@
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-3">Pages</h4>
                 <ul class="list-unstyled">
-                    <li><a href="#">About us</a></li>
+                    <li><a href="<?= base_url('about'); ?>">About us</a></li>
                     <li><a href="#">Contact us</a></li>
                 </ul>
                 <hr>
