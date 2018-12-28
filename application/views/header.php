@@ -37,15 +37,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
           <div class="row">
             <div class="col-lg-6 offer mb-3 mb-lg-0"><href="#" class="ml-1"></div>
             <div class="col-lg-6 text-center text-lg-right">
-
               <ul class="menu list-inline mb-0">
-                  <?php if($this->session->logged_in): ?>
-                      <li class="list-inline-item"><a href="#">Setting</a></li>
-                      <li class="list-inline-item"><a href="#">Logout</a></li>
-                  <?php else: ?>
-                    <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                    <li class="list-inline-item"><a href="<?= base_url('register'); ?>">Register</a></li>
-                  <?php endif; ?>
+                <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                <li class="list-inline-item"><a href="<?= base_url('register'); ?>">Register</a></li>
               </ul>
             </div>
           </div>
