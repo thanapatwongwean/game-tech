@@ -40,6 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
               <ul class="menu list-inline mb-0">
                 <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
                 <li class="list-inline-item"><a href="<?= base_url('register'); ?>">Register</a></li>
+				<li class="list-inline-item"><a href="<?= base_url('user'); ?>">Test user</a></li>
               </ul>
             </div>
           </div>
