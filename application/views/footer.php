@@ -10,13 +10,13 @@
                 <h4 class="mb-3">Pages</h4>
                 <ul class="list-unstyled">
                     <li><a href="<?= base_url('about'); ?>">About us</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="<?= base_url('contact'); ?>">Contact us</a></li>
                 </ul>
                 <hr>
                 <h4 class="mb-3">User</h4>
                 <ul class="list-unstyled">
                     <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                    <li><a href="#">Regiter</a></li>
+                    <li><a href="<?= base_url('register'); ?>">Register</a></li>
                 </ul>
             </div>
             <!-- /.col-lg-3-->
@@ -24,8 +24,8 @@
                 <h4 class="mb-3">Recommend</h4>
                 <h5>PC</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">CPU</a></li>
-                    <li><a href="#">VGA</a></li>
+                    <li><a href="#">CPU-INTEL</a></li>
+                    <li><a href="#">VGA-NVIADIA</a></li>
                 </ul>
                 <h5>NOTEBOOK</h5>
                 <ul class="list-unstyled">

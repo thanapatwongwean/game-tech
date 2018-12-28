@@ -189,7 +189,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                   </li>
                 </ul>
               </li>
-			  <li class="nav-item dropdown menu-large"><a href="#" data-delay="200" class="button-toggle nav-link">CONTACT<b class="caret"></b></a>
+			  <li class="nav-item dropdown menu-large"><a href="<?= base_url('contact'); ?>" data-delay="200" class="button-toggle nav-link">CONTACT<b class="caret"></b></a>
 
             </ul>
             <div class="navbar-buttons d-flex justify-content-end">
