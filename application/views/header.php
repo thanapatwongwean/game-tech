@@ -216,4 +216,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
     <div id="all">
         <div id="content">
             <div class="container">
-                <div class="grid-container">
