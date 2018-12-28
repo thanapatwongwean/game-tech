@@ -74,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
 
       </div>
       <nav class="navbar navbar-expand-lg">
-        <div class="container"><a href="index.html" class="navbar-brand home"><img src="public/images/logo.png" alt="GamingTech logo" class="d-none d-md-inline-block"><img src="public/images/logo-small.png" alt="GamingTech logo" class="d-inline-block d-md-none"><span class="sr-only">Go to homepage</span></a>
+        <div class="container"><a href="<?= base_url(); ?>" class="navbar-brand home"><img src="public/images/logo.png" alt="GamingTech logo" class="d-none d-md-inline-block"><img src="public/images/logo-small.png" alt="GamingTech logo" class="d-inline-block d-md-none"><span class="sr-only">Go to homepage</span></a>
           <div class="navbar-buttons">
             <button type="button" data-toggle="collapse" data-target="#navigation" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
             <button type="button" data-toggle="collapse" data-target="#search" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></button>

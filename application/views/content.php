@@ -8,8 +8,7 @@
        
 	   
 <div class="grid-container">
-  <div class="maintop">1</div>
-  <div class="mainleft">2</div>
+  <div class="mainleft">1</div>
   <div class="mainright">
   <div id="content">
         <div class="container">

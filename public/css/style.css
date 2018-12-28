@@ -499,11 +499,9 @@ h1 {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 3fr;
-  grid-template-areas: "maintop maintop" "mainleft mainright";
+  grid-template-rows: 1fr;
+  grid-template-areas: "mainleft mainright";
 }
-
-.maintop { grid-area: maintop; }
 
 .mainleft { grid-area: mainleft; }
 
