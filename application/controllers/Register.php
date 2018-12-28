@@ -37,7 +37,7 @@ class Register extends CI_Controller{
         $submit_data['email'] = $this->input->post('email', TRUE);
         if ($this->form_validation->run() == TRUE) {
             $this->load->model('user_model');
-            if ($this->user_model->insert_data($submit_data)) {
+            if ($this->user_model->create_user($submit_data)) {
                 redirect('/');
             } else {
                 redirect('register');
