@@ -19,7 +19,7 @@ class Home extends CI_Controller {
     }
 
     public function login(){
-        $this->load->library('session');
+        $this->load->library('form_validation');
         $this->load->model('user_model');
         $email = $this->input->post('email');
         $password = $this->input->post('password');

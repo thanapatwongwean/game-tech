@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class User_model extends CI_Model{
 
     public function insert_data($data)    {
-        return $this->db->insert('post', $data);
+        return $this->db->insert('user', $data);
     }
 
     public function check_user($email,$password){
@@ -19,6 +19,5 @@ class User_model extends CI_Model{
         }
         return FALSE;
     }
-
 
 }
