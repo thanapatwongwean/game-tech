@@ -89,19 +89,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                       <div class="col-md-6 col-lg-3">
                         <h5>CPU</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">T-shirts</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Shirts</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Pants</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Accessories</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">Intel</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">AMD</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
                         <h5>VGA</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Trainers</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Sandals</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Hiking shoes</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Casual</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">NVIDIA</a></li>
+                          <li class="nav-item"><a href="#" class="nav-link">AMD</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
