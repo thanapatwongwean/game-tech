@@ -13,7 +13,8 @@ class Home extends CI_Controller {
     public function index(){
         //load view
         $this->load->view('header');
-        $this->load->view('content');
+        $this->load->view('left_content');
+        $this->load->view('right_content');
         $this->load->view('footer');
 
     }
@@ -35,4 +36,11 @@ class Home extends CI_Controller {
         }
 
     }
+
+    public function getCPU(){
+        $this->load->model('product_model');
+        $data = $this->product_model->getAllCPU();
+        $this->session->set_userdata('CPU',$data);
+        redirect('/');
+        }
 }
