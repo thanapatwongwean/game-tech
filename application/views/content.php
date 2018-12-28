@@ -1,15 +1,6 @@
-<!--
-    *** CONTENT ***
-    _________________________________________________________
-    -->
-	
-
-
-       
-	   
-<div class="grid-container">
-  <div class="mainleft">1</div>
-  <div class="mainright">
+<div class="mainleft">
+</div>
+<div class="mainright">
   <div id="content">
         <div class="container">
           <div class="row">
