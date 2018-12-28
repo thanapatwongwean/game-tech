@@ -493,6 +493,31 @@ h1 {
 * ======================================================================
 *
 */
+
+.grid-container { height: 100%; margin: 0; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: "maintop maintop" "mainleft mainright";
+}
+
+.maintop { grid-area: maintop; }
+
+.mainleft { grid-area: mainleft; }
+
+.mainright { grid-area: mainright; }
+
+
+tbody > tr {
+    cursor: pointer;
+}
+
+.result{
+    margin-top:20px;
+}
+
 #content .card.sidebar-menu {
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
