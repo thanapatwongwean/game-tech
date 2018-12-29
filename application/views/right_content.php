@@ -9,7 +9,7 @@
                         <!-- ngRepeat: p in [] | page_rang:pages -->
                     </div></dir-pagination-controls><!-- end ngIf: ViewMode.getViewMode() == 'grid' -->
 
-                    <?php if($param == 'CPU'):?>
+                    <?php if($param == 'CPU' || $param == 'MB' || $param == 'VGA' || $param == 'HDD' || $param == 'SSD' || $param == 'COOL' || $param == 'PSU' || $param == 'CASE' ):?>
 				<div class="col-lg-13">
 					<div class="box">
 						<div class="table-responsive mb-4">
