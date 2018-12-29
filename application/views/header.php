@@ -41,6 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                 <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
                 <li class="list-inline-item"><a href="<?= base_url('register'); ?>">Register</a></li>
 				<li class="list-inline-item"><a href="<?= base_url('user'); ?>">Test user</a></li>
+				<li class="list-inline-item"><a href="<?= base_url('cart'); ?>"><i class="fa fa-shopping-cart"></i>Test Cart</a></li>
               </ul>
             </div>
           </div>
