@@ -1,27 +1,33 @@
 <div class="grid-container">
     <div class="mainleft">
         <div>
-            <a href="<?= base_url('Home/');?>CPU"> CPU </a>
+            <a href="<?= base_url('Home');?>/CPU"> CPU </a>
         </div>
         <div>
-            Mainboard
+            <a href="<?= base_url('Home');?>/MB">MB</a>
         </div>
         <div>
-            VGA Card
+            <a href="<?= base_url('Home');?>/VGA">VGA</a>
         </div>
         <div>
-            Harddisk
+            <a href="<?= base_url('Home/storage/');?>/HDD">Harddisk</a>
         </div>
         <div>
-            Solid State Drive
+            <a href="<?= base_url('Home/storage/');?>/SDD">Solid State Drive</a>
         </div>
         <div>
-            Power Supply
+            <a href="<?= base_url('Home/storage/');?>/SDDM">Solid State Drive M.2</a>
         </div>
         <div>
-            Case
+            <a href="<?= base_url('Home');?>/PSU">Power Supply</a>
         </div>
         <div>
-            CPU Cooler
+            <a href="<?= base_url('Home');?>/Case">Case</a>
+        </div>
+        <div>
+            <a href="<?= base_url('Home');?>/Cooling">CPU Cooler</a>
+        </div>
+        <div>
+            <a href="<?= base_url('Home');?>/Monitor">Monitor</a>
         </div>
     </div>

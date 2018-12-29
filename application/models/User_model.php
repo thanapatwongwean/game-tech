@@ -13,7 +13,6 @@ class User_model extends CI_Model{
     {
         $this->db->where('email', $email);
         $datas = $this->db->get('user');
-        print_r($datas);
         if ($datas->num_rows() > 0) {
             $data = $datas->row();
             $hash = $data->password;
@@ -43,7 +42,20 @@ class User_model extends CI_Model{
         $this->db->where('username',$username);
         return $this->db->get()->row('phone');
     }
-    public function verify_password($password,$hash){
-        return password_verify($password,$hash);
+
+    public function getData($username){
+        $this->db->where('username',$username);
+        $query = $this->db->get('user');
+        if ($query->num_rows() > 0) {
+            $data = $query->row();
+            return $data;
+        }
+        return FALSE;
     }
+
+    public function update($username,$data){
+        $this->db->where('username',$username);
+        return $this->db->update('user',$username);
+    }
+
 }

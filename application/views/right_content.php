@@ -9,11 +9,11 @@
                         <!-- ngRepeat: p in [] | page_rang:pages -->
                     </div></dir-pagination-controls><!-- end ngIf: ViewMode.getViewMode() == 'grid' -->
 
-                    <?php if($param == 'CPU'):?>
+                    <?php if(!empty($param)):?>
                         <table>
                             <tr>
                                 <th>
-
+                                    <?= $param ?>
                                 </th>
                             </tr>
                             <?php

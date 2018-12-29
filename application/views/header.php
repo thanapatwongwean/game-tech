@@ -41,13 +41,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                   <?php if($this->session->logged_in): ?>
                       <li class="list-inline-item"><a href="<?= base_url('user'); ?>">Test user</a></li>
                       <li class="list-inline-item"><a href="<?= base_url('cart'); ?>"><i class="fa fa-shopping-cart"></i>Test Cart</a></li>
-                      <li class="list-inline-item"><a href="<?= base_url('logout');?>">Logout</a></li>
                   <?php else: ?>
                       <?php if($this->session->flashdata("error")):
                           echo '<div style ="color:red;"><strong>'.$this->session->flashdata("error").'</strong></div><br>';
                       endif;
                       ?>
-                      <li class="list-inline-item"><a href="#"" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                      <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
                       <li class="list-inline-item"><a href="<?= base_url('register'); ?>">Register</a></li>
                   <?php endif; ?>
               </ul>
@@ -62,12 +61,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                 <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
               </div>
               <div class="modal-body">
-                <form action="" method="post">
+                <form action="<?= base_url('login'); ?>" method="post">
                   <div class="form-group">
-                    <input id="email" type="text" placeholder="email" class="form-control">
+                    <input name="email" id="email" type="text" placeholder="email" class="form-control">
                   </div>
                   <div class="form-group">
-                    <input id="password" type="password" placeholder="password" class="form-control">
+                    <input name="password" id="password" type="password" placeholder="password" class="form-control">
                   </div>
                   <p class="text-center">
                     <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
@@ -97,26 +96,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                       <div class="col-md-6 col-lg-3">
                         <h5>CPU</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Intel</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">AMD</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/CPU');?>/Intel" class="nav-link">Intel</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/CPU');?>/AMD" class="nav-link">AMD</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
                         <h5>VGA</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">NVIDIA</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">AMD</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/GPU');?>/VGA" class="nav-link">NVIDIA</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/GPU');?>/AMD" class="nav-link">AMD</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
                         <h5>Accessories</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Motherboard</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">RAM</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Cooling</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Monitor</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Storage</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">PSU</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home');?>/MB" class="nav-link">Motherboard</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home');?>/RAM" class="nav-link">RAM</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home');?>/Cooling" class="nav-link">Cooling</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home');?>/Monitor" class="nav-link">Monitor</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/Storage');?>" class="nav-link">Storage</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home');?>/PSU" class="nav-link">PSU</a></li>
                         </ul>
                       </div>
                     </div>
@@ -130,19 +129,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                       <div class="col-md-6 col-lg-3">
                         <h5>Brand</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Asus</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Acer</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Dell</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">HP</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/notebook');?>/Asus" class="nav-link">Asus</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/notebook');?>/Acer" class="nav-link">Acer</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/notebook');?>/Dell" class="nav-link">Dell</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/notebook');?>/HP" class="nav-link">HP</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
                         <h5>Price Range</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">0-15000฿</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">15000-20000฿</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">20000-25000฿</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">25000+</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/cost');?>/0" class="nav-link">0-15000฿</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/cost');?>/15000" class="nav-link">15000-20000฿</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/cost');?>/20000" class="nav-link">20000-25000฿</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/cost');?>/25000" class="nav-link">25000+</a></li>
                         </ul>
                       </div>
                     </div>
@@ -156,41 +155,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                       <div class="col-md-6 col-lg-3">
                         <h5>Mouse</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Cougar</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Corsair</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Signo</a></li>
-						  <li class="nav-item"><a href="#" class="nav-link">Steelseries</a></li>
-						  <li class="nav-item"><a href="#" class="nav-link">Razer</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/mouse');?>/Cougar" class="nav-link">Cougar</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/mouse');?>/Corsair" class="nav-link">Corsair</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/mouse');?>/Signo" class="nav-link">Signo</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/mouse');?>/Steelseries" class="nav-link">Steelseries</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/mouse');?>/Razer" class="nav-link">Razer</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
                         <h5>Keyboard</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Cougar</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Corsair</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Signo</a></li>
-						  <li class="nav-item"><a href="#" class="nav-link">Steelseries</a></li>
-						  <li class="nav-item"><a href="#" class="nav-link">Razer</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/keyboard');?>/Cougar" class="nav-link">Cougar</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/keyboard');?>/Corsai" class="nav-link">Corsair</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/keyboard');?>/Signo" class="nav-link">Signo</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/keyboard');?>/Steelseries" class="nav-link">Steelseries</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/keyboard');?>/Razer" class="nav-link">Razer</a></li>
                         </ul>
                       </div>
 					  <div class="col-md-6 col-lg-3">
                         <h5>Headphone</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Seinheiser</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">E-blue</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">HyperX</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Nubwo</a></li>
-						  <li class="nav-item"><a href="#" class="nav-link">Signo</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/headphone');?>/Seinheiser" class="nav-link">Seinheiser</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/headphone');?>/E-blue" class="nav-link">E-blue</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/headphone');?>/HyperX" class="nav-link">HyperX</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/headphone');?>/Nubwo" class="nav-link">Nubwo</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/headphone');?>/Signo" class="nav-link">Signo</a></li>
                         </ul>
                       </div>
 					  <div class="col-md-6 col-lg-3">
                         <h5>Accessories</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Mousepad</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Webcam</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Microphone</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Bungee</a></li>
-						  <li class="nav-item"><a href="#" class="nav-link">Speaker</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/mousepad');?>" class="nav-link">Mousepad</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/webcam');?>" class="nav-link">Webcam</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/microphone');?>" class="nav-link">Microphone</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/bungee');?>" class="nav-link">Bungee</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/speaker');?>" class="nav-link">Speaker</a></li>
                         </ul>
                       </div>
                     </div>
