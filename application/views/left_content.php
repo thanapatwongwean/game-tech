@@ -1,7 +1,7 @@
 <div class="grid-container">
     <div class="mainleft">
         <div>
-            <a href="<?= base_url('home/getCPU');?>"> CPU </a>
+            <a href="<?= base_url('Home/');?>CPU"> CPU </a>
         </div>
         <div>
             Mainboard

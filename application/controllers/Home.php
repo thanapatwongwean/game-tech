@@ -10,12 +10,25 @@ class Home extends CI_Controller {
         $this->load->helper('url');
     }
 
-    public function index(){
+     function _remap($param){
+        $this->index($param);
+     }
+
+    public function index($param){
         //load view
-        $this->load->view('header');
-        $this->load->view('left_content');
-        $this->load->view('right_content');
-        $this->load->view('footer');
+        $data = array();
+        if(!empty($param)){
+            $this->load->model('product_model');
+            $datas = $this->product_model->getData($param);
+            $data = array(
+                'param' => $param,
+                'datas' => $datas
+            );
+        }
+            $this->load->view('header');
+            $this->load->view('left_content');
+            $this->load->view('right_content',$data);
+            $this->load->view('footer');
 
     }
 
@@ -36,11 +49,4 @@ class Home extends CI_Controller {
         }
 
     }
-
-    public function getCPU(){
-        $this->load->model('product_model');
-        $data = $this->product_model->getAllCPU();
-        $this->session->set_userdata('CPU',$data);
-        redirect('/');
-        }
 }

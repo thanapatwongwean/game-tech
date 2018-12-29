@@ -9,14 +9,14 @@
                         <!-- ngRepeat: p in [] | page_rang:pages -->
                     </div></dir-pagination-controls><!-- end ngIf: ViewMode.getViewMode() == 'grid' -->
 
-                    <?php if($this->session->CPU):?>
+                    <?php if($param == 'CPU'):?>
                         <table>
                             <tr>
                                 <th>
-                                    CPU
+
                                 </th>
                             </tr>
-                            <?php $datas = $this->session->CPU;
+                            <?php
                             foreach($datas as $data){
                                 echo'<tr><td>';
                                 echo $data['name'].'</td><td>';
@@ -25,7 +25,6 @@
                             }?>
 
                         </table>
-                    <?php $this->session->unset_userdata('CPU')?>
 
                     <!-- end ngIf: !isLoading && ViewMode.getCurrentComp() == 'cpu' -->
                     <!-- end ngRepeat: componentType in selectableComponents --><!-- ngInclude: ViewMode.getBasePath() + 'component/pc-custom-spec/view/'+componentType+'_view.html' --><div ng-repeat="componentType in selectableComponents" ng-show="componentType == ViewMode.getCurrentComp()" ng-include="ViewMode.getBasePath() + 'component/pc-custom-spec/view/'+componentType+'_view.html'" class="ng-scope ng-hide"><div ng-controller="MBSelectorCtrl" class="ng-scope">
