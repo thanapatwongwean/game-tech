@@ -82,7 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
           </div>
           <div id="navigation" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item"><a href="<?= base_url(); ?>" class="nav-link active">Home</a></li>
+              <li class="nav-item"><a href="<?= base_url(); ?>" class="nav-link">Home</a></li>
               <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle nav-link">PC<b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
