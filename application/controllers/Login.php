@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Login extends CI_Controller
 {
     public function __construct()
@@ -15,10 +14,12 @@ class Login extends CI_Controller
         $this->form_validation->set_rules('email', 'email', 'required');
         $this->form_validation->set_rules('password', 'password', 'required');
         $this->form_validation->set_message('required', 'The %s field is require');
+
         $email = $this->input->post('email');
         $password = $this->input->post('password');
 
         if($this->form_validation->run()) {
+
             if($this->user_model->can_login($email,$password)){
                 $this->session->set_userdata('email',$email);
                 $this->session->set_userdata('username',$this->user_model->getUsername($this->session->email));
@@ -32,10 +33,10 @@ class Login extends CI_Controller
                 $this->session->set_flashdata('error', 'Incorrect email or password.');
                 redirect('/');
             }
-
         }
         $this->session->set_flashdata('error',validation_errors());
         redirect('/');
     }
 }
+
 

@@ -9,16 +9,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url('vendor/bootstrap/css');?>/bootstrap.min.css">
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?=base_url('vendor/font-awesome/css');?>/font-awesome.min.css">
     <!-- Google fonts - Roboto -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100">
     <!-- owl carousel-->
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.css">
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="<?=base_url('vendor/owl.carousel/assets');?>/owl.carousel.css">
+    <link rel="stylesheet" href="<?=base_url('vendor/owl.carousel/assets');?>/owl.theme.default.css">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="public/css/style.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="<?=base_url('public/css');?>/style.css" id="theme-stylesheet">
     <!-- Favicon-->
     <link rel="shortcut icon" href="favicon.png">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -38,10 +38,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
             <div class="col-lg-6 offer mb-3 mb-lg-0"><href="#" class="ml-1"></div>
             <div class="col-lg-6 text-center text-lg-right">
               <ul class="menu list-inline mb-0">
-                <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                <li class="list-inline-item"><a href="<?= base_url('register'); ?>">Register</a></li>
-				<li class="list-inline-item"><a href="<?= base_url('user'); ?>">Test user</a></li>
-				<li class="list-inline-item"><a href="<?= base_url('cart'); ?>"><i class="fa fa-shopping-cart"></i>Test Cart</a></li>
+                  <?php if($this->session->logged_in): ?>
+                      <li class="list-inline-item"><a href="<?= base_url('user'); ?>">Test user</a></li>
+                      <li class="list-inline-item"><a href="<?= base_url('cart'); ?>"><i class="fa fa-shopping-cart"></i>Test Cart</a></li>
+                      <li class="list-inline-item"><a href="<?= base_url('logout');?>">Logout</a></li>
+                  <?php else: ?>
+                      <?php if($this->session->flashdata("error")):
+                          echo '<div style ="color:red;"><strong>'.$this->session->flashdata("error").'</strong></div><br>';
+                      endif;
+                      ?>
+                      <li class="list-inline-item"><a href="#"" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                      <li class="list-inline-item"><a href="<?= base_url('register'); ?>">Register</a></li>
+                  <?php endif; ?>
               </ul>
             </div>
           </div>
@@ -54,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                 <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
               </div>
               <div class="modal-body">
-                <form action="href="<?= base_url('home/login'); ?>" method="post">
+                <form action="" method="post">
                   <div class="form-group">
                     <input id="email" type="text" placeholder="email" class="form-control">
                   </div>
