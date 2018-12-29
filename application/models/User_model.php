@@ -35,13 +35,13 @@ class User_model extends CI_Model{
         return $this->db->get()->row('username');
     }
 
-    public function getAdress($username){
+    public function getAddress($username){
         $this->db->from('user');
         $this->db->where('username',$username);
         return $this->db->get()->row('address');
     }
 
-    public function getfullname($username){
+    public function getFullname($username){
         $this->db->from('user');
         $this->db->where('username',$username);
         return $this->db->get()->row('phone');
@@ -53,5 +53,8 @@ class User_model extends CI_Model{
         return $this->db->get()->row('phone');
     }
 
+    public function verify_password($password,$hash){
+        return password_verify($password,$hash);
+    }
 
 }

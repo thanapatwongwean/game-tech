@@ -20,12 +20,12 @@ class Login extends CI_Controller
 
         if($this->form_validation->run()) {
             if($this->user_model->can_login($email,$password)){
-                $this->session->user_data('email',$email);
-                $this->session->user_data('username',$this->user_model->getUsername($this->session->email));
-                $this->session->user_data('address',$this->user_model->getAddeess($this->session->username));
-                $this->session->user_data('fullname',$this->user_model->getFullname($this->session->username));
-                $this->session->user_data('phone',$this->user_model->getPhone($this->session->username));
-                $this->session->user_data('logged_in','1');
+                $this->session->set_userdata('email',$email);
+                $this->session->set_userdata('username',$this->user_model->getUsername($this->session->email));
+                $this->session->set_userdata('address',$this->user_model->getAddress($this->session->username));
+                $this->session->set_userdata('fullname',$this->user_model->getFullname($this->session->username));
+                $this->session->set_userdata('phone',$this->user_model->getPhone($this->session->username));
+                $this->session->set_userdata('logged_in','1');
                 redirect('/','refresh');
             }
             else{

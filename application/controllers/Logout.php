@@ -9,7 +9,7 @@ class Logout extends CI_Controller {
         $this->load->helper('url');
     }
 
-    public function logout(){
+    public function index(){
         if(!$this->session->logged_in){
             redirect(base_url());
         }

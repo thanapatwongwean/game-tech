@@ -43,7 +43,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                       <li class="list-inline-item"><a href="#">Setting</a></li>
                       <li class="list-inline-item"><a href="<?= base_url('logout');?>">Logout</a></li>
                   <?php else: ?>
-                      <?php echo '<div style ="color:red;"><strong>'.$this->session->flashdata("error").'</strong></div><br>';?>
+                        <?php if($this->session->flashdata("error")):
+                                echo '<div style ="color:red;"><strong>'.$this->session->flashdata("error").'</strong></div><br>';
+                              endif;
+                        ?>
                       <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
                     <li class="list-inline-item"><a href="<?= base_url('register'); ?>">Register</a></li>
                   <?php endif; ?>
