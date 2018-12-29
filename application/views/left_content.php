@@ -1,27 +1,19 @@
+
 <div class="grid-container">
     <div class="mainleft">
-        <div>
-            <a href="<?= base_url('Home/');?>CPU"> CPU </a>
+		<div class="card sidebar-menu">
+		<div class="card-body">
+			<ul class="nav nav-pills flex-column"><a href="<?= base_url('Home/');?>CPU" class="nav-link"><i class="fa fa-heart"></i> CPU </a>
+			 <a href="<?= base_url('Home/');?>CPU" class="nav-link"><i class="fa fa-heart"></i> Mainboard </a>
+			 <a href="<?= base_url('Home/');?>CPU" class="nav-link"><i class="fa fa-heart"></i> VGA Card </a>
+			 <a href="<?= base_url('Home/');?>CPU" class="nav-link"><i class="fa fa-heart"></i> Harddisk </a>
+			 <a href="<?= base_url('Home/');?>CPU" class="nav-link"><i class="fa fa-heart"></i> Solid State Drive </a>
+			 <a href="<?= base_url('Home/');?>CPU" class="nav-link"><i class="fa fa-heart"></i> CPU </a>
+			 </ul>
         </div>
-        <div>
-            Mainboard
-        </div>
-        <div>
-            VGA Card
-        </div>
-        <div>
-            Harddisk
-        </div>
-        <div>
-            Solid State Drive
-        </div>
-        <div>
-            Power Supply
-        </div>
-        <div>
-            Case
-        </div>
-        <div>
-            CPU Cooler
-        </div>
-    </div>
+		</div>
+    
+	</div>
+	
+</div>
+
