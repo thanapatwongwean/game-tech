@@ -10,7 +10,7 @@
                     </div></dir-pagination-controls><!-- end ngIf: ViewMode.getViewMode() == 'grid' -->
 
                     <?php if($param == 'CPU'):?>
-				<div class="col-lg-8">
+				<div class="col-lg-13">
 					<div class="box">
 						<div class="table-responsive mb-4">
                         <table class="table">

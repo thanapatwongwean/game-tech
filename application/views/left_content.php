@@ -1,4 +1,3 @@
-
 <div class="grid-container">
     <div class="mainleft">
 		<div class="card sidebar-menu">
@@ -15,5 +14,5 @@
     
 	</div>
 	
-</div>
+
 
