@@ -9,23 +9,28 @@
                         <!-- ngRepeat: p in [] | page_rang:pages -->
                     </div></dir-pagination-controls><!-- end ngIf: ViewMode.getViewMode() == 'grid' -->
 
-                    <?php if(!empty($param)):?>
-                        <table>
-                            <tr>
-                                <th>
-                                    <?= $param ?>
-                                </th>
-                            </tr>
-                            <?php
-                            foreach($datas as $data){
-                                echo'<tr><td>';
-                                echo $data['name'].'</td><td>';
-                                echo $data['description'].'</td><td>';
-                                echo $data['price'].'</td></tr>';
-                            }?>
+                    <?php if($param == 'CPU'):?>
+                        <div class="col-lg-8">
+                            <div class="box">
+                                <div class="table-responsive mb-4">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                        <?php
+                                        foreach($datas as $data){
+                                            echo'<tr><td>';
+                                            echo $data['name'].'</td><td>';
+                                            echo $data['description'].'</td><td>';
+                                            echo $data['price'].'</td></tr>';
+                                        }?>
 
-                        </table>
-
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     <!-- end ngIf: !isLoading && ViewMode.getCurrentComp() == 'cpu' -->
                     <!-- end ngRepeat: componentType in selectableComponents --><!-- ngInclude: ViewMode.getBasePath() + 'component/pc-custom-spec/view/'+componentType+'_view.html' --><div ng-repeat="componentType in selectableComponents" ng-show="componentType == ViewMode.getCurrentComp()" ng-include="ViewMode.getBasePath() + 'component/pc-custom-spec/view/'+componentType+'_view.html'" class="ng-scope ng-hide"><div ng-controller="MBSelectorCtrl" class="ng-scope">
                             <!-- ngIf: isLoading -->

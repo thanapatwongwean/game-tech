@@ -4,7 +4,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Product_model extends CI_Model{
 
     public function insert_product($data)    {
-        return $this->db->insert('post', $data);
+        return $this->db->insert('product', $data);
+    }
+
+    public function getAll(){
+        $query = $this->db->get('product');
+        if ($query->num_rows() > 0) {
+            $data = array();
+            foreach ($query->result_array() as $item) {
+                $data['product'][] = array(
+                    'id'    => $item['id'],
+                    'name'  => $item['name'],
+                    'price' => $item['price'],
+                    'quantity' => $item['quantity'],
+                    'type' => $item['type'],
+                    'description' => $item['description'],
+                    'image' => $item['image']
+                );
+            }
+            return $data;
+        }
+        return FALSE;
     }
 
     public  function getTypeData($type){
