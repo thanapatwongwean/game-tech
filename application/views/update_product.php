@@ -2,9 +2,10 @@
     <div class="col-lg-6">
         <div class="box">
             <h2>Update Product</h2>
-            <?php   if($this->session->flashdata("error")):
+            <?php
                             echo '<div style ="color:red;"><strong>'.$this->session->flashdata("error").'</strong></div><br>';
-            endif;?>
+                            echo '<div style ="color:red;"><strong>'.$this->session->flashdata("error_validation").'</strong></div><br>';
+            ?>
             <?= form_open_multipart(base_url("product/update/$id"), 'class=""'); ?>
             <div class="form-group">
                 <?php
@@ -64,7 +65,7 @@
                 <?php
                 echo form_label('Image', 'image');
                 echo '<br>';
-                $data = ['name' => 'image', 'id' => 'image', 'size' => '50','value' => 'image'];
+                $data = ['name' => 'image', 'id' => 'image', 'size' => '50'];
                 echo form_upload($data)
                 ?>
             </div>

@@ -13,8 +13,10 @@ class Cart extends CI_Controller{
 
     public function index()
 	{
+	    $this->load->model('order_model');
+	    $data['orders'] = $this->order_model->getOrder($this->session->username);
 		$this->load->view('header');
-        $this->load->view('form_cart');
+        $this->load->view('form_cart',$data);
         $this->load->view('footer');
 		
 	}

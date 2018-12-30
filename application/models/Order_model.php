@@ -5,12 +5,25 @@ class Order_model extends CI_Model{
     public function __construct()
     {
         parent::__construct();
-        date_timezone_set('Asia/Bangkok');
+        date_default_timezone_set('Asia/Bangkok');
+
+    }
+
+    public  function  getOrder($username){
+        $this->db->where('username',$username);
+        $data = $this->db->get('order');
+        if($data->num_rows() > 0){
+            foreach ($data>result_array() as $item) {
+                $orders[] = $item;
+            }
+            return $orders;
+        }
+        return false;
 
     }
 
     public function insert_order($data){
-        $date = date('Y:m:d H:i:s');
+        $date = date('Y-m-d H:i:s');
         $data = array(
             'date'  => $date,
             'status'  => $data['status'],
