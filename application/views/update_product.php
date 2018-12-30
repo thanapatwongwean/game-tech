@@ -5,7 +5,7 @@
             <?php   if($this->session->flashdata("error")):
                             echo '<div style ="color:red;"><strong>'.$this->session->flashdata("error").'</strong></div><br>';
             endif;?>
-            <?= form_open(base_url("product/update/$id"), 'class=""'); ?>
+            <?= form_open_multipart(base_url("product/update/$id"), 'class=""'); ?>
             <div class="form-group">
                 <?php
                 echo form_label('Name', 'name');
@@ -42,16 +42,10 @@
                     'SSD' => 'SSD',
                     'COOL' => 'COOL',
                     'CASE' => 'CASE',
-                    'Monitor' => 'Monitor',
-                    'Notebook' => 'Notebook',
+                    'NB' => 'NB',
                     'Mouse' => 'Mouse',
-                    'Keyboard' => 'Keyboard',
-                    'Headphone' => 'Headphone',
-                    'Mousepad' => 'Mousepad',
-                    'Webcam' => 'Webcam',
-                    'Microphone' => 'Microphone',
-                    'Bungee' => 'Bungee',
-                    'Speaker' => 'Speaker'
+                    'KB' => 'KB',
+                    'Headset' => 'Headset'
                 );
                 $selected = $type;
                 $data = ['name' => 'type', 'id' => 'type','options' => $options,'selected' => $selected];
@@ -64,6 +58,14 @@
                 echo '<br>';
                 $data = ['name' => 'description', 'id' => 'description','cols' => '50','rows' => '3','class' => 'form-control','value' => $description];
                 echo form_textarea($data);
+                ?>
+            </div>
+            <div>
+                <?php
+                echo form_label('Image', 'image');
+                echo '<br>';
+                $data = ['name' => 'image', 'id' => 'image', 'size' => '50','value' => 'image'];
+                echo form_upload($data)
                 ?>
             </div>
             <div class="text-center">

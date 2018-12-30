@@ -31,12 +31,38 @@ class Product extends CI_Controller{
     public  function insert(){
         $this->load->model('product_model');
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('name','name','required');
-        $this->form_validation->set_rules('price','price','required');
-        $this->form_validation->set_rules('quantity','quantity','required');
+        $this->form_validation->set_rules('id','id','required|is_unique[user.id]');
+        $this->form_validation->set_rules('name','name','required|is_unique[user.user]');
+        $this->form_validation->set_rules('price','price','required|greater_than[0]');
+        $this->form_validation->set_rules('quantity','quantity','required|greater_than_equal_to[0]');
         $this->form_validation->set_rules('type','type','required');
         $this->form_validation->set_rules('description','description','required');
         $this->form_validation->set_message('required', 'The %s field is require');
+        $this->form_validation->set_message('is_unique', 'The %s is already taken');
+        $this->form_validation->set_message('greater_than', 'price must greater than 0');
+        $this->form_validation->set_message('greater_than_equal_to', 'quantity must greater than equal to 0');
+
+        /*if(!empty($_FILES['picture']['name'])){
+            $config['upload_path']          = './public/images';
+            $config['allowed_types']        = 'gif|jpg|png';
+            $config['max_size']             = 64;
+            $config['max_width']            = 256;
+            $config['max_height']           = 256;
+            $config['file_name'] = $_FILES['image']['name'];
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+            if($this->upload->do_upload('picture')){
+                $uploadData = $this->upload->data();
+                $image = $uploadData['file_name'];
+            }else{
+                $image = '';
+            }
+        }
+        else {
+            $image = '';
+        }*/
+
+        $submit_data['id'] = $this->input->post('id', TRUE);
         $submit_data['name'] = $this->input->post('name', TRUE);
         $submit_data['price'] = $this->input->post('price', TRUE);
         $submit_data['fullname'] = $this->input->post('fullname', TRUE);
@@ -45,13 +71,15 @@ class Product extends CI_Controller{
         $submit_data['description'] = $this->input->post('description', TRUE);
 
         if($this->form_validation->run()){
-            $data = array(
-                'name' => $submit_data['name'],
-                'price' => $submit_data['price'],
-                'quantity' =>$submit_data['quantity'],
-                'type' =>$submit_data['type'],
-                'description' =>$submit_data['description']
-            );
+                $data = array(
+                    'id' => $submit_data['id'],
+                    'name' => $submit_data['name'],
+                    'price' => $submit_data['price'],
+                    'quantity' =>$submit_data['quantity'],
+                    'type' =>$submit_data['type'],
+                    'description' =>$submit_data['description'],
+                );
+
             if($this->product_model->insert_product($data)){
                 $this->session->set_flashdata('msg','insert successed');
             }
@@ -71,11 +99,14 @@ class Product extends CI_Controller{
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('name','name','required');
-        $this->form_validation->set_rules('price','price','required');
-        $this->form_validation->set_rules('quantity','quantity','required');
+        $this->form_validation->set_rules('price','price','required|greater_than[0]');
+        $this->form_validation->set_rules('quantity','quantity','greater_than_equal_to[0]');
         $this->form_validation->set_rules('type','type','required');
         $this->form_validation->set_rules('description','description','required');
         $this->form_validation->set_message('required', 'The %s field is require');
+        $this->form_validation->set_message('greater_than', 'price must greater than 0');
+        $this->form_validation->set_message('greater_than_equal_to', 'quantity must greater than equal to 0');
+
         $submit_data['name'] = $this->input->post('name', TRUE);
         $submit_data['price'] = $this->input->post('price', TRUE);
         $submit_data['fullname'] = $this->input->post('fullname', TRUE);
@@ -83,21 +114,42 @@ class Product extends CI_Controller{
         $submit_data['type'] = $this->input->post('type', TRUE);
         $submit_data['description'] = $this->input->post('description', TRUE);
 
+
         if($this->form_validation->run()){
 
+            $config['upload_path']          = './public/images';
+            $config['allowed_types']        = 'gif|jpg|png';
+            $config['max_size']             = 64;
+            $config['file_name'] = $_FILES['image']['name'];
+            $config['overwrite'] = TRUE;
+
+            $this->load->library('upload',$config);
+            $image = 0;
+            if($this->upload->do_upload('image') == false){
+
+                $this->session->set_flashdata('error_validation','file is cannot upload');
+                redirect("update/");
+
+            }else{
+                $uploadData = $this->upload->data();
+                $image = $uploadData['full_path'];
+            }
             $data = array(
                 'name' => $submit_data['name'],
                 'price' => $submit_data['price'],
                 'quantity' =>$submit_data['quantity'],
                 'type' =>$submit_data['type'],
-                'description' =>$submit_data['description']
+                'description' =>$submit_data['description'],
+                'image' => $image
             );
+
+
             if($this->product_model->updateData($id,$data)){
                 $this->session->set_flashdata('msg','update successed');
                 redirect('product');
             }
             else{
-                $this->session->set_flashdata('error','update failed');
+                $this->session->set_flashdata('error_msg','update failed');
                 redirect('product');
             }
         }
