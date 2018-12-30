@@ -5,7 +5,7 @@
             <?php   if($this->session->flashdata("error")):
                             echo '<div style ="color:red;"><strong>'.$this->session->flashdata("error").'</strong></div><br>';
             endif;?>
-            <?= form_open('product/update', 'class=""'); ?>
+            <?= form_open(base_url("product/update/$id"), 'class=""'); ?>
             <div class="form-group">
                 <?php
                 echo form_label('Name', 'name');
@@ -26,8 +26,8 @@
                 <?php
                 echo form_label('Quantity', 'quantity');
                 echo '<br>';
-                $data = ['name' => 'Qqantity', 'id' => 'quantity','size' => '50' ,'class' => 'form-control','value' => $quantity];
-                echo form_password($data);
+                $data = ['name' => 'quantity', 'id' => 'quantity','size' => '50' ,'class' => 'form-control','value' => $quantity];
+                echo form_input($data);
                 ?>
             </div>
             <div>
@@ -54,15 +54,15 @@
                     'Speaker' => 'Speaker'
                 );
                 $selected = $type;
-                $data = ['name' => 'type', 'id' => 'type','$options' => $options,'$selected' => $selected];
+                $data = ['name' => 'type', 'id' => 'type','options' => $options,'selected' => $selected];
                 echo form_dropdown($data);
                 ?>
             </div>
             <div class="form-group">
                 <?php
-                echo form_label('Desscription', 'desscription');
+                echo form_label('Description', 'description');
                 echo '<br>';
-                $data = ['name' => 'desscription', 'id' => 'desscription','cols' => '50','rows' => '3','class' => 'form-control','value' => $desscription];
+                $data = ['name' => 'description', 'id' => 'description','cols' => '50','rows' => '3','class' => 'form-control','value' => $description];
                 echo form_textarea($data);
                 ?>
             </div>

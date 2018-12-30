@@ -62,12 +62,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                         <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                     </div>
                     <div class="modal-body">
-                        <form action="" method="post">
+                        <form action="<?= base_url('login'); ?>" method="post">
                             <div class="form-group">
-                                <input id="email" type="text" placeholder="email" class="form-control">
+                                <input name="email" id="email" type="text" placeholder="email" class="form-control">
                             </div>
                             <div class="form-group">
-                                <input id="password" type="password" placeholder="password" class="form-control">
+                                <input name="password" id="password" type="password" placeholder="password" class="form-control">
                             </div>
                             <p class="text-center">
                                 <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>

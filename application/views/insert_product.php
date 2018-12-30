@@ -1,16 +1,16 @@
 <main>
     <div class="col-lg-6">
         <div class="box">
-            <h2>Insert Product</h2>
-            <<?php   if($this->session->flashdata("error")):
+            <h2>Update Product</h2>
+            <?php   if($this->session->flashdata("error")):
                 echo '<div style ="color:red;"><strong>'.$this->session->flashdata("error").'</strong></div><br>';
             endif;?>
-            <?= form_open('product/insert', 'class=""'); ?>
+            <?= form_open(base_url("product/insert"), 'class=""'); ?>
             <div class="form-group">
                 <?php
                 echo form_label('Name', 'name');
                 echo '<br>';
-                $data = ['name' => 'name', 'id' => 'name', 'size' => '50' ,'class' => 'form-control',];
+                $data = ['name' => 'name', 'id' => 'name', 'size' => '50' ,'class' => 'form-control'];
                 echo form_input($data);
                 ?>
             </div>
@@ -26,8 +26,8 @@
                 <?php
                 echo form_label('Quantity', 'quantity');
                 echo '<br>';
-                $data = ['name' => 'Qqantity', 'id' => 'quantity','size' => '50' ,'class' => 'form-control'];
-                echo form_password($data);
+                $data = ['name' => 'quantity', 'id' => 'quantity','size' => '50' ,'class' => 'form-control',];
+                echo form_input($data);
                 ?>
             </div>
             <div>
@@ -53,15 +53,15 @@
                     'Bungee' => 'Bungee',
                     'Speaker' => 'Speaker'
                 );
-                $data = ['name' => 'type', 'id' => 'type','$options' => $options];
+                $data = ['name' => 'type', 'id' => 'type','options' => $options,'selected' => 'CPU'];
                 echo form_dropdown($data);
                 ?>
             </div>
             <div class="form-group">
                 <?php
-                echo form_label('Desscription', 'desscription');
+                echo form_label('Description', 'description');
                 echo '<br>';
-                $data = ['name' => 'desscription', 'id' => 'desscription','cols' => '50','rows' => '3','class' => 'form-control'];
+                $data = ['name' => 'description', 'id' => 'description','cols' => '50','rows' => '3','class' => 'form-control'];
                 echo form_textarea($data);
                 ?>
             </div>
