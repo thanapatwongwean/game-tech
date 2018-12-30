@@ -9,7 +9,7 @@
                         <!-- ngRepeat: p in [] | page_rang:pages -->
                     </div></dir-pagination-controls><!-- end ngIf: ViewMode.getViewMode() == 'grid' -->
 
-                    <?php if($param == 'CPU' || $param == 'MB' || $param == 'VGA' || $param == 'HDD' || $param == 'SSD' || $param == 'COOL' || $param == 'PSU' || $param == 'CASE' ):?>
+                    <?php if($param == 'CPU' || $param == 'MB' || $param == 'VGA' || $param == 'HDD' || $param == 'SSD' || $param == 'COOL' || $param == 'PSU' || $param == 'CASE' || $param == 'RAM'):?>
                         <div class="col-lg-13">
                             <div class="box">
                                 <div class="table-responsive mb-4">
@@ -85,6 +85,54 @@
                         </div><!-- end ngRepeat: componentType in selectableComponents -->
 
                         <!-- ngInclude: ViewMode.getBasePath() + 'component/pc-custom-spec/view/mode_build.html' -->
+                    <?php elseif($param == 'INTEL' || $param == 'AMD' ):?>
+                        <div class="col-lg-13">
+                            <div class="box">
+                                <div class="table-responsive mb-4">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                        <?php
+                                        foreach($datas as $data){
+                                            echo'<tr><td>';
+                                            echo $data['name'].'</td><td>';
+                                            echo $data['description'].'</td><td>';
+                                            echo $data['price'].'</td></tr>';
+                                        }?>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php elseif($param == 'AMD_V' || $param == 'NVIDIA' ):?>
+                        <div class="col-lg-13">
+                            <div class="box">
+                                <div class="table-responsive mb-4">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                        <?php
+                                        foreach($datas as $data){
+                                            echo'<tr><td>';
+                                            echo $data['name'].'</td><td>';
+                                            echo $data['description'].'</td><td>';
+                                            echo $data['price'].'</td></tr>';
+                                        }?>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                     <?php else: ?>
                         <div ng-include="ViewMode.getBasePath() + 'component/pc-custom-spec/view/mode_build.html'" ng-show="mode=='build'" class="ng-scope"><div ng-controller="BuildResultController" class="ng-scope">
 
@@ -118,10 +166,6 @@
                                                                 <path transform="matrix(2.5253911,-0.02098513,0.02098513,2.5253911,-90.965257,-907.96176)" d="m 215.67102,677.85408 -31.61616,17.77797 -31.20425,-18.49141 0.4119,-36.26938 31.61616,-17.77797 31.20425,18.49141 z" inkscape:randomized="0" inkscape:rounded="0" inkscape:flatsided="true" sodipodi:arg2="1.0585539" sodipodi:arg1="0.53495507" sodipodi:r2="19.118814" sodipodi:r1="36.271721" sodipodi:cy="659.36267" sodipodi:cx="184.46677" sodipodi:sides="6" id="path4259-8-5" fill="#353535" stroke="#000000" style="fill-opacity:1;stroke-width:0.9899115;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" sodipodi:type="star"></path>
                                                                 <text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" x="389.62216" y="768.37518" id="text5109-9" sodipodi:linespacing="125%"><tspan sodipodi:role="line" id="tspan5111-0" x="389.62216" y="768.37518" fill="#ffffff" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:40px;font-family:'agency-fb';-inkscape-font-specification:'Agency FB Bold Condensed';text-align:center;text-anchor:middle;fill-opacity:1">CASE</tspan></text>
                                                             </g>
-                                                            <g id="part-ram">
-                                                                <path transform="matrix(0.99996548,-0.00830937,0.00830937,0.99996548,-25.47019,36.128835)" d="m 215.67102,677.85408 -31.61616,17.77797 -31.20425,-18.49141 0.4119,-36.26938 31.61616,-17.77797 31.20425,18.49141 z" inkscape:randomized="0" inkscape:rounded="0" inkscape:flatsided="true" sodipodi:arg2="1.0585539" sodipodi:arg1="0.53495507" sodipodi:r2="19.118814" sodipodi:r1="36.271721" sodipodi:cy="659.36267" sodipodi:cx="184.46677" sodipodi:sides="6" id="path4259" fill="#353535" stroke="#000000" style="fill-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" sodipodi:type="star"></path>
-                                                                <text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" x="164.50734" y="698.80878" id="text5109" sodipodi:linespacing="125%"><tspan sodipodi:role="line" id="tspan5111" x="164.50734" y="698.80878" fill="#ffffff" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13px;font-family:'agency-fb';-inkscape-font-specification:'Agency FB Bold Condensed';text-align:center;text-anchor:middle;fill-opacity:1">RAM</tspan></text>
-                                                            </g>
                                                             <g id="part-cpu">
                                                                 <path transform="matrix(0.99996548,-0.00830937,0.00830937,0.99996548,75.52981,21.128835)" d="m 215.67102,677.85408 -31.61616,17.77797 -31.20425,-18.49141 0.4119,-36.26938 31.61616,-17.77797 31.20425,18.49141 z" inkscape:randomized="0" inkscape:rounded="0" inkscape:flatsided="true" sodipodi:arg2="1.0585539" sodipodi:arg1="0.53495507" sodipodi:r2="19.118814" sodipodi:r1="36.271721" sodipodi:cy="659.36267" sodipodi:cx="184.46677" sodipodi:sides="6" id="path4259-8" fill="#353535" stroke="#000000" style="fill-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" sodipodi:type="star"></path>
                                                                 <text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" x="265.17139" y="683.62964" id="text5109-2" sodipodi:linespacing="125%"><tspan sodipodi:role="line" id="tspan5111-2" x="265.17139" y="683.62964" fill="#ffffff" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13px;font-family:'agency-fb';-inkscape-font-specification:'Agency FB Bold Condensed';text-align:center;text-anchor:middle;fill-opacity:1">CPU</tspan></text>
@@ -138,9 +182,9 @@
                                                                 <path transform="matrix(0.99996548,-0.00830937,0.00830937,0.99996548,157.52981,216.12884)" d="m 215.67102,677.85408 -31.61616,17.77797 -31.20425,-18.49141 0.4119,-36.26938 31.61616,-17.77797 31.20425,18.49141 z" inkscape:randomized="0" inkscape:rounded="0" inkscape:flatsided="true" sodipodi:arg2="1.0585539" sodipodi:arg1="0.53495507" sodipodi:r2="19.118814" sodipodi:r1="36.271721" sodipodi:cy="659.36267" sodipodi:cx="184.46677" sodipodi:sides="6" id="path4259-8-9-8" fill="#353535" stroke="#000000" style="fill-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" sodipodi:type="star"></path>
                                                                 <text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" x="347.54932" y="878.79114" id="text5109-1" sodipodi:linespacing="125%"><tspan sodipodi:role="line" id="tspan5111-57" x="347.54932" y="878.79114" fill="#ffffff" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13px;font-family:'agency-fb';-inkscape-font-specification:'Agency FB Bold Condensed';text-align:center;text-anchor:middle;fill-opacity:1">COOLING</tspan></text>
                                                             </g>
-                                                            <g id="part-monitor">
+                                                            <g id="part-ram">
                                                                 <path transform="matrix(0.99996548,-0.00830937,0.00830937,0.99996548,244.52981,216.12884)" d="m 215.67102,677.85408 -31.61616,17.77797 -31.20425,-18.49141 0.4119,-36.26938 31.61616,-17.77797 31.20425,18.49141 z" inkscape:randomized="0" inkscape:rounded="0" inkscape:flatsided="true" sodipodi:arg2="1.0585539" sodipodi:arg1="0.53495507" sodipodi:r2="19.118814" sodipodi:r1="36.271721" sodipodi:cy="659.36267" sodipodi:cx="184.46677" sodipodi:sides="6" id="path4259-8-9-6" fill="#353535" stroke="#000000" style="fill-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" sodipodi:type="star"></path>
-                                                                <text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" x="434.72357" y="878.38422" id="text5109-3" sodipodi:linespacing="125%"><tspan sodipodi:role="line" id="tspan5111-4" x="434.72357" y="878.38422" fill="#ffffff" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13px;font-family:'agency-fb';-inkscape-font-specification:'Agency FB Bold Condensed';text-align:center;text-anchor:middle;fill-opacity:1">MONITOR</tspan></text>
+                                                                <text xml:space="preserve" style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" x="434.72357" y="878.38422" id="text5109-3" sodipodi:linespacing="125%"><tspan sodipodi:role="line" id="tspan5111-4" x="434.72357" y="878.38422" fill="#ffffff" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13px;font-family:'agency-fb';-inkscape-font-specification:'Agency FB Bold Condensed';text-align:center;text-anchor:middle;fill-opacity:1">RAM</tspan></text>
                                                             </g>
                                                             <g id="part-psu">
                                                                 <path transform="matrix(0.99996548,-0.00830937,0.00830937,0.99996548,322.52981,143.12884)" d="m 215.67102,677.85408 -31.61616,17.77797 -31.20425,-18.49141 0.4119,-36.26938 31.61616,-17.77797 31.20425,18.49141 z" inkscape:randomized="0" inkscape:rounded="0" inkscape:flatsided="true" sodipodi:arg2="1.0585539" sodipodi:arg1="0.53495507" sodipodi:r2="19.118814" sodipodi:r1="36.271721" sodipodi:cy="659.36267" sodipodi:cx="184.46677" sodipodi:sides="6" id="path4259-8-9-9" fill="#353535" stroke="#000000" style="fill-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" sodipodi:type="star"></path>

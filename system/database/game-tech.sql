@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 29, 2018 at 09:20 PM
+-- Generation Time: Dec 30, 2018 at 12:52 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -101,7 +101,8 @@ INSERT INTO `product` (`id`, `name`, `price`, `quantity`, `type`, `description`,
 ('00009', '1 TB HDD (ฮาร์ดดิสก์) WD BLUE 7200RPM SATA3 ( WD10EZEX )', 1210, 5, 'HDD', 'ความจุ 1 TB\r\nForm Factor 3.5\r\nRPM 7200', NULL),
 ('00010', '1 TB SSD (เอสเอสดี) SAMSUNG 970 EVO PCIe/NVMe M.2 2280 ( MZ-V7E1T0BW )', 14500, 3, 'SSD', 'ความจุ 1 TB\r\nขนาด SSD 22x80\r\nTechnology Samsung V-NAND 3-bit MLC\r\nSequential Read (Up To) 3400 MB/s\r\nSequential Write (Up To) 2500 MB/s\r\nRandom Read (Up To) 500000 IOPS\r\nRandom Write (Up To) 450000 IOPS', NULL),
 ('00011', 'POWER SUPPLY (อุปกรณ์จ่ายไฟ) SUPER FLOWER LEADEX GOLD 550W ( 80+ GOLD ) [ SF-550F14EG ]', 2990, 2, 'PSU', 'ประเภท Power Supply\r\nกำลังไฟสูงสุด 550 W\r\nFan Size 135 mm\r\nPower Factor Correction Active\r\nMainboard Connector 20+4 Pin\r\nCPU Connector 1 x 4+4 Pin\r\nPCI Ex Connector 3 x 6+2 Pin\r\nSata Connector 7\r\nMolex Connector 4\r\nFloppy Connector -\r\nสามารถถอดสายได้ Fully Modular\r\nมาตราฐานรับรอง 80+ GOLD\r\nระบบป้องกันไฟเกิน OVP/OCP/OPP/SCP/UVP\r\nรองรับไฟขาเข้า 100-240 VAC\r\nขนาด 165x150x86 mm', NULL),
-('00012', 'CPU AIR COOLER (พัดลมซีพียู) ID COOLING SE-214-RGB', 1390, 1, 'COOL', 'Compatibility : Intel LGA2066/2011/1366/1151/1150/1155/1156, AMD FM2+/FM2/FM1/AM4/AM3+/AM3/AM2+/AM2\r\nTDP : 150W\r\nOverall Dimension : 129×80×160mm (L×W×H)\r\nHeatsink Material : 4×Ф6mm Heatpipe(Direct Touch)+Aluminum Fin+Black Coating\r\nWeight : 680g\r\nFan Dimension : 130×130×25mm\r\nFan Speed : 500-1800±10%RPM(PWM)', NULL);
+('00012', 'CPU AIR COOLER (พัดลมซีพียู) ID COOLING SE-214-RGB', 1390, 2, 'COOL', 'TDP : 150W\r\nOverall Dimension : 129×80×160mm (L×W×H)\r\nHeatsink Material : 4×Ф6mm Heatpipe(Direct Touch)+Aluminum Fin+Black Coating\r\nWeight : 680g\r\nFan Dimension : 130×130×25mm\r\nFan Speed : 500-1800±10%RPM(PWM)', NULL),
+('00013', 'VGA (การ์ดแสดงผล) SAPPHIRE AMD FirePro W7000 4GB', 29900, 1, 'VGA', 'Bus Interface 3 x PCIe 3.0 x16 Slots\r\nChipset AMD\r\nSeries AMD FirePro\r\nGPU Name Pitcairn XT GL\r\nGPU Model FirePro W7000\r\nTechnology 28 nm\r\nความเร็ว GPU 950 MHz\r\nความเร็ว RAM 1200\r\nขนาดความจุ RAM 4 GB\r\nชนิดของ RAM GDDR5\r\nCUDA Core / Compute Units / Stream Processor -\r\nLength 242 mm\r\nWidth 0\r\nHeight 0', NULL);
 
 -- --------------------------------------------------------
 
