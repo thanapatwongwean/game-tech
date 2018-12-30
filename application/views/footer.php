@@ -36,7 +36,7 @@
             <!-- /.col-lg-3-->
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-3">This Website Present to</h4>
-                <p><strong>Dr.Weerachai</strong><br>Professor blah<br>Engineering blah<br><strong>by</strong><br><strong>Phee Handy</strong><br>Engineer blah</p>
+                <p><strong>Wachira Promsaka Na Sakolnakorn</strong><br>Professor of CN342<br>Faculty of electrical engineering and computing<br><strong>by</strong><br><strong>Dheeramate Chobkajring</strong><br>5910613198<br><strong>Thanapat Wongwean</strong><br>5910613297<br>Faculty of electrical engineering and computing</p>
                 <hr class="d-block d-md-none">
             </div>
             <!-- /.col-lg-3-->
@@ -61,7 +61,7 @@ _________________________________________________________
     <div class="container">
         <div class="row">
             <div class="col-lg-6 mb-2 mb-lg-0">
-                <p class="text-center text-lg-left">©2018 CN342 Web application.</p>
+                <p class="text-center text-lg-left">©2018 CN342 Web Application Development.</p>
             </div>
         </div>
     </div>
