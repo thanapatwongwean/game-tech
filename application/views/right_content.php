@@ -17,16 +17,18 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Description</th>
-                                            <th>Price</th>
+                                            <th>Price</th> 
+											<th>Cart</th>
+
                                         </tr>
                                         <?php
                                         foreach($datas as $data){
                                             echo'<tr><td>';
                                             echo $data['name'].'</td><td>';
                                             echo $data['description'].'</td><td>';
-                                            echo $data['price'].'</td></tr>';
+                                            echo $data['price'].'</td><td>';
+											echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
                                         }?>
-
                                     </table>
                                 </div>
                             </div>
@@ -93,14 +95,16 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Description</th>
-                                            <th>Price</th>
+                                            <th>Price</th> 
+											<th>Cart</th>
                                         </tr>
                                         <?php
                                         foreach($datas as $data){
                                             echo'<tr><td>';
                                             echo $data['name'].'</td><td>';
                                             echo $data['description'].'</td><td>';
-                                            echo $data['price'].'</td></tr>';
+                                            echo $data['price'].'</td><td>'; 
+											echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
                                         }?>
 
                                     </table>
@@ -116,14 +120,16 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Description</th>
-                                            <th>Price</th>
+                                            <th>Price</th> 
+											<th>Cart</th>
                                         </tr>
                                         <?php
                                         foreach($datas as $data){
                                             echo'<tr><td>';
                                             echo $data['name'].'</td><td>';
                                             echo $data['description'].'</td><td>';
-                                            echo $data['price'].'</td></tr>';
+                                            echo $data['price'].'</td><td>'; 
+											echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
                                         }?>
 
                                     </table>
@@ -142,14 +148,16 @@
                             <tr>
                         <th>Name</th>
                         <th>Description</th>
-                        <th>Price</th>
+                        <th>Price</th> 
+						<th>Cart</th>
                             </tr>
                             <?php
                             foreach($datas as $data){
                                 echo'<tr><td>';
                                 echo $data['name'].'</td><td>';
                                 echo $data['description'].'</td><td>';
-                                echo $data['price'].'</td></tr>';
+                                echo $data['price'].'</td><td>'; 
+								echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
                             }?>
 
                         </table>
@@ -165,14 +173,16 @@
                             <tr>
                         <th>Name</th>
                         <th>Description</th>
-                        <th>Price</th>
+                        <th>Price</th> 
+						<th>Cart</th>
                             </tr>
                             <?php
                             foreach($datas as $data){
                                 echo'<tr><td>';
                                 echo $data['name'].'</td><td>';
                                 echo $data['description'].'</td><td>';
-                                echo $data['price'].'</td></tr>';
+                                echo $data['price'].'</td><td>'; 
+								echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
                             }?>
 
                         </table>
@@ -188,14 +198,16 @@
                             <tr>
                         <th>Name</th>
                         <th>Description</th>
-                        <th>Price</th>
+                        <th>Price</th> 
+						<th>Cart</th>
                             </tr>
                             <?php
                             foreach($datas as $data){
                                 echo'<tr><td>';
                                 echo $data['name'].'</td><td>';
                                 echo $data['description'].'</td><td>';
-                                echo $data['price'].'</td></tr>';
+                                echo $data['price'].'</td><td>'; 
+								echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
                             }?>
 
                         </table>
@@ -211,14 +223,16 @@
                             <tr>
                         <th>Name</th>
                         <th>Description</th>
-                        <th>Price</th>
+                        <th>Price</th> 
+						<th>Cart</th>
                             </tr>
                             <?php
                             foreach($datas as $data){
                                 echo'<tr><td>';
                                 echo $data['name'].'</td><td>';
                                 echo $data['description'].'</td><td>';
-                                echo $data['price'].'</td></tr>';
+                                echo $data['price'].'</td><td>'; 
+								echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
                             }?>
 
                         </table>
@@ -234,14 +248,16 @@
                             <tr>
                         <th>Name</th>
                         <th>Description</th>
-                        <th>Price</th>
+                        <th>Price</th> 
+						<th>Cart</th>
                             </tr>
                             <?php
                             foreach($datas as $data){
                                 echo'<tr><td>';
                                 echo $data['name'].'</td><td>';
                                 echo $data['description'].'</td><td>';
-                                echo $data['price'].'</td></tr>';
+                                echo $data['price'].'</td><td>'; 
+								echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
                             }?>
 
                         </table>
@@ -257,14 +273,16 @@
                             <tr>
                         <th>Name</th>
                         <th>Description</th>
-                        <th>Price</th>
+                        <th>Price</th> 
+						<th>Cart</th>
                             </tr>
                             <?php
                             foreach($datas as $data){
                                 echo'<tr><td>';
                                 echo $data['name'].'</td><td>';
                                 echo $data['description'].'</td><td>';
-                                echo $data['price'].'</td></tr>';
+                                echo $data['price'].'</td><td>'; 
+								echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
                             }?>
 
                         </table>
