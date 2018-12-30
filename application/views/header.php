@@ -130,11 +130,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                       <div class="col-md-6 col-lg-3">
                         <h5>Brand</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="<?= base_url('Home/');?>ASUS"" class="nav-link">Asus</a></li>
-                          <li class="nav-item"><a href="<?= base_url('Home/');?>ACER"" class="nav-link">Acer</a></li>
-                          <li class="nav-item"><a href="<?= base_url('Home/');?>DELL"" class="nav-link">Dell</a></li>
-                          <li class="nav-item"><a href="<?= base_url('Home/');?>HP"" class="nav-link">HP</a></li>
-						  <li class="nav-item"><a href="<?= base_url('Home/');?>NB"" class="nav-link">ALL</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>ASUS" class="nav-link">Asus</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>ACER" class="nav-link">Acer</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>DELL" class="nav-link">Dell</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>HP" class="nav-link">HP</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>NOTEBOOK" class="nav-link">ALL</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
@@ -160,7 +160,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                           <li class="nav-item"><a href="<?= base_url('Home/');?>CORSAIR_M" class="nav-link">Corsair</a></li>
                           <li class="nav-item"><a href="<?= base_url('Home/');?>SIGNO_M" class="nav-link">Signo</a></li>
 						  <li class="nav-item"><a href="<?= base_url('Home/');?>STEELSERIES_M" class="nav-link">Steelseries</a></li>
-						  <li class="nav-item"><a href="<?= base_url('Home/');?>MOUSE"" class="nav-link">ALL</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>MOUSE" class="nav-link">ALL</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
@@ -169,7 +169,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                           <li class="nav-item"><a href="<?= base_url('Home/');?>CORSAIR_K" class="nav-link">Corsair</a></li>
                           <li class="nav-item"><a href="<?= base_url('Home/');?>SIGNO_K" class="nav-link">Signo</a></li>
 						  <li class="nav-item"><a href="<?= base_url('Home/');?>STEELSERIES_K" class="nav-link">Steelseries</a></li>
-						  <li class="nav-item"><a href="<?= base_url('Home/');?>KB"" class="nav-link">ALL</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>KEYBOARD" class="nav-link">ALL</a></li>
                         </ul>
                       </div>
 					  <div class="col-md-6 col-lg-3">
@@ -178,7 +178,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                           <li class="nav-item"><a href="<?= base_url('Home/');?>STEELSERIES" class="nav-link">Steelseries</a></li>
                           <li class="nav-item"><a href="<?= base_url('Home/');?>HYPERX" class="nav-link">HyperX</a></li>
 						  <li class="nav-item"><a href="<?= base_url('Home/');?>SENNHEISER" class="nav-link">Sennheiser</a></li>
-						  <li class="nav-item"><a href="<?= base_url('Home/');?>HEADSET"" class="nav-link">ALL</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>HEADSET" class="nav-link">ALL</a></li>
                         </ul>
                       </div>
                     </div>

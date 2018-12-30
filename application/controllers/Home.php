@@ -30,6 +30,15 @@ class Home extends CI_Controller
                 'datas' => $datas
             );		
 		}
+		elseif($param == 'AMD')
+        {
+            $this->load->model('product_model');
+            $datas = $this->product_model->getContainCPU($param);
+            $data = array(
+                'param' => $param,
+                'datas' => $datas
+            );		
+		}
 		elseif($param == '15000' || $param == '20000'  || $param == '25000' || $param == '1000000')
 		{
 			$this->load->model('product_model');
@@ -38,6 +47,24 @@ class Home extends CI_Controller
                 'param' => $param,
                 'datas' => $datas
             );		
+		}
+		elseif($param == 'KEYBOARD')
+		{
+			$this->load->model('product_model');
+            $datas = $this->product_model->getContainKB($param);
+            $data = array(
+                'param' => $param,
+                'datas' => $datas
+            );	
+		}
+		elseif($param == 'KEYBOARD')
+		{
+			$this->load->model('product_model');
+            $datas = $this->product_model->getContainNB($param);
+            $data = array(
+                'param' => $param,
+                'datas' => $datas
+            );	
 		}
 		elseif($param == 'CORSAIR_M' || $param == 'SIGNO_M' || $param == 'STEELSERIES_M')
 		{
@@ -75,7 +102,7 @@ class Home extends CI_Controller
                 'datas' => $datas
             );
         }
-        elseif (!empty($param)) {
+        elseif (!empty($param) ) {
             $this->load->model('product_model');
             $datas = $this->product_model->getData($param);
             $data = array(

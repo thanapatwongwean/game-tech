@@ -48,6 +48,53 @@ class Product_model extends CI_Model{
     public function getContainVGA($text)
     {
         $this->db->like('description', $text);
+		$this->db->where('type', 'VGA');
+        $this->db->order_by("name", "asc");
+        $query = $this->db->get('product');
+        if($query->num_rows() > 0) {
+            foreach ($query->result_array() as $item) {
+                $data[] = $item;
+            }
+            return $data;
+        }
+        return FALSE;
+    }
+	
+	public function getContainCPU($text)
+    {
+        $this->db->like('name', $text);
+		$this->db->where('type', 'CPU');
+        $this->db->order_by("name", "asc");
+        $query = $this->db->get('product');
+        if($query->num_rows() > 0) {
+            foreach ($query->result_array() as $item) {
+                $data[] = $item;
+            }
+            return $data;
+        }
+        return FALSE;
+    }
+	
+	public function getContainKB($text)
+    {
+        $this->db->like('name', $text);
+		$this->db->where('type', 'KB');
+        $this->db->order_by("name", "asc");
+        $query = $this->db->get('product');
+        if($query->num_rows() > 0) {
+            foreach ($query->result_array() as $item) {
+                $data[] = $item;
+            }
+            return $data;
+        }
+        return FALSE;
+    }
+	
+		
+	public function getContainNB($text)
+    {
+        $this->db->like('name', $text);
+		$this->db->where('type', 'NB');
         $this->db->order_by("name", "asc");
         $query = $this->db->get('product');
         if($query->num_rows() > 0) {
