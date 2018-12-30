@@ -85,7 +85,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
         <div class="container"><a href="<?= base_url(); ?>" class="navbar-brand home"><img src="<?=base_url('public/images');?>/logo.png" alt="GamingTech logo" class="d-none d-md-inline-block"><img src="public/images/logo-small.png" alt="GamingTech logo" class="d-inline-block d-md-none"><span class="sr-only">Go to homepage</span></a>
           <div class="navbar-buttons">
             <button type="button" data-toggle="collapse" data-target="#navigation" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
-            <button type="button" data-toggle="collapse" data-target="#search" class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle search</span><i class="fa fa-search"></i></button>
           </div>
           <div id="navigation" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
@@ -130,11 +129,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                       <div class="col-md-6 col-lg-3">
                         <h5>Brand</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="<?= base_url('Home/');?>ASUS"" class="nav-link">Asus</a></li>
-                          <li class="nav-item"><a href="<?= base_url('Home/');?>ACER"" class="nav-link">Acer</a></li>
-                          <li class="nav-item"><a href="<?= base_url('Home/');?>DELL"" class="nav-link">Dell</a></li>
-                          <li class="nav-item"><a href="<?= base_url('Home/');?>HP"" class="nav-link">HP</a></li>
-						  <li class="nav-item"><a href="<?= base_url('Home/');?>NB"" class="nav-link">ALL</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>ASUS" class="nav-link">Asus</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>ACER" class="nav-link">Acer</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>DELL" class="nav-link">Dell</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>HP" class="nav-link">HP</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>NOTEBOOK" class="nav-link">ALL</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
@@ -160,7 +159,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                           <li class="nav-item"><a href="<?= base_url('Home/');?>CORSAIR_M" class="nav-link">Corsair</a></li>
                           <li class="nav-item"><a href="<?= base_url('Home/');?>SIGNO_M" class="nav-link">Signo</a></li>
 						  <li class="nav-item"><a href="<?= base_url('Home/');?>STEELSERIES_M" class="nav-link">Steelseries</a></li>
-						  <li class="nav-item"><a href="<?= base_url('Home/');?>MOUSE"" class="nav-link">ALL</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>MOUSE" class="nav-link">ALL</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
@@ -169,7 +168,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                           <li class="nav-item"><a href="<?= base_url('Home/');?>CORSAIR_K" class="nav-link">Corsair</a></li>
                           <li class="nav-item"><a href="<?= base_url('Home/');?>SIGNO_K" class="nav-link">Signo</a></li>
 						  <li class="nav-item"><a href="<?= base_url('Home/');?>STEELSERIES_K" class="nav-link">Steelseries</a></li>
-						  <li class="nav-item"><a href="<?= base_url('Home/');?>KB"" class="nav-link">ALL</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>KEYBOARD" class="nav-link">ALL</a></li>
                         </ul>
                       </div>
 					  <div class="col-md-6 col-lg-3">
@@ -178,7 +177,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                           <li class="nav-item"><a href="<?= base_url('Home/');?>STEELSERIES" class="nav-link">Steelseries</a></li>
                           <li class="nav-item"><a href="<?= base_url('Home/');?>HYPERX" class="nav-link">HyperX</a></li>
 						  <li class="nav-item"><a href="<?= base_url('Home/');?>SENNHEISER" class="nav-link">Sennheiser</a></li>
-						  <li class="nav-item"><a href="<?= base_url('Home/');?>HEADSET"" class="nav-link">ALL</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>HEADSET" class="nav-link">ALL</a></li>
                         </ul>
                       </div>
                     </div>
@@ -187,25 +186,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
               </li>
 			  <li class="nav-item dropdown menu-large"><a href="<?= base_url('contact'); ?>" data-delay="200" class="button-toggle nav-link">CONTACT<b class="caret"></b></a>
             </ul>
-            <div class="navbar-buttons d-flex justify-content">
-              <!-- /.nav-collapse-->
-              <div id="search-not-mobile" class="navbar-collapse collapse"></div><a data-toggle="collapse" href="#" class="btn navbar-btn btn-primary d-none d-lg-inline-block"><span class="sr-only">Search</span><i class="fa fa-search"></i></a>
-            </div>
+            
           </div>
         </div>
       </nav>
-      <div id="search" class="collapse">
-        <div class="container">
-          <form role="search" class="ml-auto">
-            <div class="input-group">
-              <input type="text" placeholder="Search" class="form-control">
-              <div class="input-group-append">
-                <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
+      
     </header>
     <div id="all">
         <div id="content">

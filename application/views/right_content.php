@@ -180,7 +180,7 @@
 					</div>
 					</div>
 					
-					<?php elseif($param == 'ASUS' || $param == 'ACER'  || $param == 'DELL' || $param == 'HP'|| $param == 'NB' ):?>
+					<?php elseif($param == 'ASUS' || $param == 'ACER'  || $param == 'DELL' || $param == 'HP'|| $param == 'NOTEBOOK' ):?>
 					<div class="col-lg-13">
 					<div class="box">
 						<div class="table-responsive mb-4">
@@ -249,7 +249,7 @@
 					</div>
 					</div>
 					
-					<?php elseif($param == 'STEELSERIES' || $param == 'SENNHEISER' || $param == 'HYPERX' || $param == 'MOUSE' || $param == 'KB' || $param == 'HEADSET' ):?>
+					<?php elseif($param == 'STEELSERIES' || $param == 'SENNHEISER' || $param == 'HYPERX' || $param == 'MOUSE' || $param == 'KEYBOARD' || $param == 'HEADSET' ):?>
 					<div class="col-lg-13">
 					<div class="box">
 						<div class="table-responsive mb-4">
