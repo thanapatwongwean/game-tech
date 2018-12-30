@@ -58,68 +58,6 @@ class Product_model extends CI_Model{
         return FALSE;
     }
 
-    public  function getMouse($cost){
-        $this->db->where('type',$cost);
-        $this->db->order_by("name", "asc");
-        $query = $this->db->get('product');
-        if ($query->num_rows() > 0) {
-            foreach ($query->result_array() as $item) {
-                $data[] = $item;
-            }
-            return $data;
-        }
-        return FALSE;
-    }
-
-    public  function getKeyboard($cost){
-        $this->db->where('type',$cost);
-        $this->db->order_by("name", "asc");
-        $query = $this->db->get('product');
-        if ($query->num_rows() > 0) {
-            foreach ($query->result_array() as $item) {
-                $data[] = $item;
-            }
-            return $data;
-        }
-        return FALSE;
-    }
-
-	
-	public function getContainVGA($text)
-	{
-		$this->db->like('description', $text);
-		$this->db->where('type !=','NB');
-		$this->db->order_by("name", "asc");
-		$query = $this->db->get('product');
-		if($query->num_rows() > 0) {
-
-
-    public  function getHeadphone($cost){
-        $this->db->where('type',$cost);
-        $this->db->order_by("name", "asc");
-        $query = $this->db->get('product');
-        if ($query->num_rows() > 0) {
-            foreach ($query->result_array() as $item) {
-                $data[] = $item;
-            }
-            return $data;
-        }
-        return FALSE;
-    }
-
-    public function getProduct($id){
-        $this->db->where('id',$id);
-        $query = $this->db->get('product');
-        if($query->num_rows() > 0){
-            foreach ($query->result_array() as $item) {
-                $data = $item;
-            }
-            return $data;
-        }
-        return FALSE;
-    }
-
-
     public function deleteData($id){
         $this->db->where('id',$id);
         return $this->db->delete('product');

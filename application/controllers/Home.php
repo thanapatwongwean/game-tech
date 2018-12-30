@@ -66,12 +66,6 @@ class Home extends CI_Controller
                 'datas' => $datas
             );
         }
-		elseif(($param != 'CPU' && $param != 'MB' && $param != 'VGA' && $param != 'HDD' && $param != 'SSD' && $param != 'COOL' && $param != 'PSU' && $param != 'CASE' && $param != 'RAM' && $param != 'NB' && $param != 'MOUSE' && $param != 'KB' && $param != 'HEADSET' )&&!empty($param))
-		{
-		$this->load->model('product_model');
-
-            );
-        }
         elseif(($param != 'CPU' && $param != 'MB' && $param != 'VGA' && $param != 'HDD' && $param != 'SSD' && $param != 'COOL' && $param != 'PSU' && $param != 'CASE' && $param != 'RAM')&&!empty($param))
         {
             $this->load->model('product_model');
