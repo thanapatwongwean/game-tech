@@ -6,6 +6,8 @@
 			<p class="text-muted">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</p></a>
 			<a href="<?= base_url('Home/');?>MB" class="nav-link"><i class="fa fa-align-justify"></i> Mainboard 
 			<p class="text-muted">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</p></a>
+			<a href="<?= base_url('Home/');?>RAM" class="nav-link"><i class="fa fa-align-justify"></i> RAM
+			<p class="text-muted">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</p></a>
 			<a href="<?= base_url('Home/');?>VGA" class="nav-link"><i class="fa fa-align-justify"></i> VGA Card 
 			<p class="text-muted">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</p></a>
 			<a href="<?= base_url('Home/');?>HDD" class="nav-link"><i class="fa fa-align-justify"></i> Harddisk 

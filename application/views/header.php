@@ -97,26 +97,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                       <div class="col-md-6 col-lg-3">
                         <h5>CPU</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Intel</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">AMD</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>INTEL" class="nav-link">Intel</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>AMD" class="nav-link">AMD</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
                         <h5>VGA</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">NVIDIA</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">AMD</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>NVIDIA" class="nav-link">NVIDIA</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>AMD_V" class="nav-link">AMD</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
                         <h5>Accessories</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Motherboard</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">RAM</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Cooling</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Monitor</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Storage</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">PSU</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>MB" class="nav-link">Motherboard</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>RAM" class="nav-link">RAM</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>COOL" class="nav-link">Cooling</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>HDD" class="nav-link">HDD</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>SSD" class="nav-link">SSD</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>PSU" class="nav-link">PSU</a></li>
                         </ul>
                       </div>
                     </div>

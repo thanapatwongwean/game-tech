@@ -20,7 +20,29 @@ class Home extends CI_Controller
     {
         //load view
         $data = array();
-        if (!empty($param)) {
+		if($param == 'AMD_V' || $param == 'NVIDIA')
+		{
+		if($param == 'AMD_V')
+			$param = 'AMD';
+			$this->load->model('product_model');
+            $datas = $this->product_model->getContainVGA($param);
+            $data = array(
+                'param' => $param,
+                'datas' => $datas
+            );		
+		}
+		elseif(($param != 'CPU' && $param != 'MB' && $param != 'VGA' && $param != 'HDD' && $param != 'SSD' && $param != 'COOL' && $param != 'PSU' && $param != 'CASE' && $param != 'RAM')&&!empty($param))
+		{
+		$this->load->model('product_model');
+            $datas = $this->product_model->getContain($param);
+            $data = array(
+                'param' => $param,
+                'datas' => $datas
+            );
+        }
+
+
+        elseif (!empty($param)) {
             $this->load->model('product_model');
             $datas = $this->product_model->getData($param);
             $data = array(
