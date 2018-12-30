@@ -21,10 +21,12 @@
 											<th>Cart</th>
 
                                         </tr>
+										<!-- PC -->
                                         <?php
                                         foreach($datas as $data){
                                             echo'<tr><td>';
-                                            echo $data['name'].'</td><td>';
+											echo '<a href="#">'; 
+                                            echo $data['name'].'</a></td><td>';
                                             echo $data['description'].'</td><td>';
                                             echo $data['price'].'</td><td>';
 											echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
@@ -98,10 +100,12 @@
                                             <th>Price</th> 
 											<th>Cart</th>
                                         </tr>
+										<!-- PC -->
                                         <?php
                                         foreach($datas as $data){
                                             echo'<tr><td>';
-                                            echo $data['name'].'</td><td>';
+                                            echo '<a href="#">';
+                                            echo $data['name'].'</a></td><td>';
                                             echo $data['description'].'</td><td>';
                                             echo $data['price'].'</td><td>'; 
 											echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
@@ -123,10 +127,12 @@
                                             <th>Price</th> 
 											<th>Cart</th>
                                         </tr>
+										<!-- PC -->
                                         <?php
                                         foreach($datas as $data){
                                             echo'<tr><td>';
-                                            echo $data['name'].'</td><td>';
+                                            echo '<a href="#">';
+                                            echo $data['name'].'</a></td><td>';
                                             echo $data['description'].'</td><td>';
                                             echo $data['price'].'</td><td>'; 
 											echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
@@ -140,55 +146,7 @@
                     </div><!-- end ngRepeat: componentType in selectableComponents -->
 
                     <!-- ngInclude: ViewMode.getBasePath() + 'component/pc-custom-spec/view/mode_build.html' -->
-					<?php elseif($param == 'INTEL' || $param == 'AMD' ):?>
-					<div class="col-lg-13">
-					<div class="box">
-						<div class="table-responsive mb-4">
-                        <table class="table">
-                            <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Price</th> 
-						<th>Cart</th>
-                            </tr>
-                            <?php
-                            foreach($datas as $data){
-                                echo'<tr><td>';
-                                echo $data['name'].'</td><td>';
-                                echo $data['description'].'</td><td>';
-                                echo $data['price'].'</td><td>'; 
-								echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
-                            }?>
 
-                        </table>
-						</div>
-					</div>
-					</div>
-					
-					<?php elseif($param == 'AMD_V' || $param == 'NVIDIA' ):?>
-					<div class="col-lg-13">
-					<div class="box">
-						<div class="table-responsive mb-4">
-                        <table class="table">
-                            <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Price</th> 
-						<th>Cart</th>
-                            </tr>
-                            <?php
-                            foreach($datas as $data){
-                                echo'<tr><td>';
-                                echo $data['name'].'</td><td>';
-                                echo $data['description'].'</td><td>';
-                                echo $data['price'].'</td><td>'; 
-								echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
-                            }?>
-
-                        </table>
-						</div>
-					</div>
-					</div>
 					
 					<?php elseif($param == 'ASUS' || $param == 'ACER'  || $param == 'DELL' || $param == 'HP'|| $param == 'NOTEBOOK' ):?>
 					<div class="col-lg-13">
