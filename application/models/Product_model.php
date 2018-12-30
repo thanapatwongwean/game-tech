@@ -7,7 +7,8 @@ class Product_model extends CI_Model{
     }
 
     public function getAll(){
-        $query = $this->db->get('product');
+        $this->db->order_by("id", "asc");
+		$query = $this->db->get('product');
         if ($query->num_rows() > 0) {
             foreach ($query->result_array() as $item) {
                 $data[] = $item;

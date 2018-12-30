@@ -31,14 +31,12 @@ class Product extends CI_Controller{
     public  function insert(){
         $this->load->model('product_model');
         $this->load->library('form_validation');
-		$this->form_validation->set_rules('id','id','required|is_unique[user.id]');
         $this->form_validation->set_rules('name','name','required');
         $this->form_validation->set_rules('price','price','required');
         $this->form_validation->set_rules('quantity','quantity','required');
         $this->form_validation->set_rules('type','type','required');
         $this->form_validation->set_rules('description','description','required');
         $this->form_validation->set_message('required', 'The %s field is require');
-		$submit_data['id'] = $this->input->post('id', TRUE);
         $submit_data['name'] = $this->input->post('name', TRUE);
         $submit_data['price'] = $this->input->post('price', TRUE);
         $submit_data['fullname'] = $this->input->post('fullname', TRUE);
@@ -48,7 +46,6 @@ class Product extends CI_Controller{
 
         if($this->form_validation->run()){
             $data = array(
-				'id' => $submit_data['id'],
                 'name' => $submit_data['name'],
                 'price' => $submit_data['price'],
                 'quantity' =>$submit_data['quantity'],

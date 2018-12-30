@@ -6,7 +6,7 @@ endif;?>
 <div class="col-lg-13">
  <div class="box">
   <div class="table-responsive mb-4">
-<table>
+<table class="table">
     <tr>
         <th>ID</th>
         <th>Name</th>
@@ -17,6 +17,7 @@ endif;?>
         <th>Update</th>
         <th>Delete</th>
     </tr>
+
     <?php foreach($product as $item):?>
         <tr>
             <td><?php echo $item['id'];?></td>
@@ -29,6 +30,7 @@ endif;?>
             <td><a href="<?= base_url('product/delete');?>/<?= $item['id']; ?>"><i class="fa fa-trash-o"></i></a></td>
         </tr>
     <?php endforeach;?>
+		
 </table>
 
 <div class="col-md-12 text-right">
