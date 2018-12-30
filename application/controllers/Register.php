@@ -33,7 +33,6 @@ class Register extends CI_Controller{
             $this->load->model('user_model');
             if ($this->user_model->create_user($submit_data)) {
                 redirect('/');
-            } else {
             }
         }// Get the  data
         $this->load->view('header');
