@@ -131,7 +131,97 @@
 					</div>
 					</div>
 					
+					<?php elseif($param == 'ASUS' || $param == 'ACER'  || $param == 'DELL' || $param == 'HP'|| $param == 'NB' ):?>
+					<div class="col-lg-13">
+					<div class="box">
+						<div class="table-responsive mb-4">
+                        <table class="table">
+                            <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                            </tr>
+                            <?php
+                            foreach($datas as $data){
+                                echo'<tr><td>';
+                                echo $data['name'].'</td><td>';
+                                echo $data['description'].'</td><td>';
+                                echo $data['price'].'</td></tr>';
+                            }?>
+
+                        </table>
+						</div>
+					</div>
+					</div>
 					
+					<?php elseif($param == '15000' || $param == '20000'  || $param == '25000' || $param == '1000000'):?>
+					<div class="col-lg-13">
+					<div class="box">
+						<div class="table-responsive mb-4">
+                        <table class="table">
+                            <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                            </tr>
+                            <?php
+                            foreach($datas as $data){
+                                echo'<tr><td>';
+                                echo $data['name'].'</td><td>';
+                                echo $data['description'].'</td><td>';
+                                echo $data['price'].'</td></tr>';
+                            }?>
+
+                        </table>
+						</div>
+					</div>
+					</div>
+					
+					<?php elseif($param == 'CORSAIR_M' || $param == 'SIGNO_M' || $param == 'STEELSERIES_M' || $param == 'CORSAIR_K' || $param == 'SIGNO_K' || $param == 'STEELSERIES_K'):?>
+					<div class="col-lg-13">
+					<div class="box">
+						<div class="table-responsive mb-4">
+                        <table class="table">
+                            <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                            </tr>
+                            <?php
+                            foreach($datas as $data){
+                                echo'<tr><td>';
+                                echo $data['name'].'</td><td>';
+                                echo $data['description'].'</td><td>';
+                                echo $data['price'].'</td></tr>';
+                            }?>
+
+                        </table>
+						</div>
+					</div>
+					</div>
+					
+					<?php elseif($param == 'STEELSERIES' || $param == 'SENNHEISER' || $param == 'HYPERX' || $param == 'MOUSE' || $param == 'KB' || $param == 'HEADSET' ):?>
+					<div class="col-lg-13">
+					<div class="box">
+						<div class="table-responsive mb-4">
+                        <table class="table">
+                            <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                            </tr>
+                            <?php
+                            foreach($datas as $data){
+                                echo'<tr><td>';
+                                echo $data['name'].'</td><td>';
+                                echo $data['description'].'</td><td>';
+                                echo $data['price'].'</td></tr>';
+                            }?>
+
+                        </table>
+						</div>
+					</div>
+					</div>
 					
                     <?php else: ?>
                     <div ng-include="ViewMode.getBasePath() + 'component/pc-custom-spec/view/mode_build.html'" ng-show="mode=='build'" class="ng-scope"><div ng-controller="BuildResultController" class="ng-scope">

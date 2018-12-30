@@ -24,13 +24,13 @@
                 <h4 class="mb-3">Recommend</h4>
                 <h5>PC</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">CPU-INTEL</a></li>
-                    <li><a href="#">VGA-NVIADIA</a></li>
+                    <li><a href="<?= base_url('Home/');?>INTEL">CPU-INTEL</a></li>
+                    <li><a href="<?= base_url('Home/');?>NVIDIA">VGA-NVIDIA</a></li>
                 </ul>
                 <h5>NOTEBOOK</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">15000-20000฿</a></li>
-                    <li><a href="#">20000-25000฿</a></li>
+                    <li><a href="<?= base_url('Home/');?>20000">15000-20000฿</a></li>
+                    <li><a href="<?= base_url('Home/');?>25000">20000-25000฿</a></li>
                 </ul>
             </div>
             <!-- /.col-lg-3-->

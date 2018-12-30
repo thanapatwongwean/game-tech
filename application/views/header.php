@@ -130,19 +130,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                       <div class="col-md-6 col-lg-3">
                         <h5>Brand</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Asus</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Acer</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Dell</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">HP</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>ASUS"" class="nav-link">Asus</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>ACER"" class="nav-link">Acer</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>DELL"" class="nav-link">Dell</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>HP"" class="nav-link">HP</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>NB"" class="nav-link">ALL</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
                         <h5>Price Range</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">0-15000฿</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">15000-20000฿</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">20000-25000฿</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">25000+</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>15000" class="nav-link">0-15000฿</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>20000" class="nav-link">15000-20000฿</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>25000" class="nav-link">20000-25000฿</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>1000000" class="nav-link">25000+</a></li>
                         </ul>
                       </div>
                     </div>
@@ -156,41 +157,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                       <div class="col-md-6 col-lg-3">
                         <h5>Mouse</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Cougar</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Corsair</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Signo</a></li>
-						  <li class="nav-item"><a href="#" class="nav-link">Steelseries</a></li>
-						  <li class="nav-item"><a href="#" class="nav-link">Razer</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>CORSAIR_M" class="nav-link">Corsair</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>SIGNO_M" class="nav-link">Signo</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>STEELSERIES_M" class="nav-link">Steelseries</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>MOUSE"" class="nav-link">ALL</a></li>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
                         <h5>Keyboard</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Cougar</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Corsair</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Signo</a></li>
-						  <li class="nav-item"><a href="#" class="nav-link">Steelseries</a></li>
-						  <li class="nav-item"><a href="#" class="nav-link">Razer</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>CORSAIR_K" class="nav-link">Corsair</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>SIGNO_K" class="nav-link">Signo</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>STEELSERIES_K" class="nav-link">Steelseries</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>KB"" class="nav-link">ALL</a></li>
                         </ul>
                       </div>
 					  <div class="col-md-6 col-lg-3">
                         <h5>Headphone</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Seinheiser</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">E-blue</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">HyperX</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Nubwo</a></li>
-						  <li class="nav-item"><a href="#" class="nav-link">Signo</a></li>
-                        </ul>
-                      </div>
-					  <div class="col-md-6 col-lg-3">
-                        <h5>Accessories</h5>
-                        <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="#" class="nav-link">Mousepad</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Webcam</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Microphone</a></li>
-                          <li class="nav-item"><a href="#" class="nav-link">Bungee</a></li>
-						  <li class="nav-item"><a href="#" class="nav-link">Speaker</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>STEELSERIES" class="nav-link">Steelseries</a></li>
+                          <li class="nav-item"><a href="<?= base_url('Home/');?>HYPERX" class="nav-link">HyperX</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>SENNHEISER" class="nav-link">Sennheiser</a></li>
+						  <li class="nav-item"><a href="<?= base_url('Home/');?>HEADSET"" class="nav-link">ALL</a></li>
                         </ul>
                       </div>
                     </div>

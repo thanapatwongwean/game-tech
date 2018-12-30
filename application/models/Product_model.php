@@ -37,6 +37,7 @@ class Product_model extends CI_Model{
 	public function getContainVGA($text)
 	{
 		$this->db->like('description', $text);
+		$this->db->where('type !=','NB');
 		$this->db->order_by("name", "asc");
 		$query = $this->db->get('product');
 		if($query->num_rows() > 0) {
@@ -47,6 +48,103 @@ class Product_model extends CI_Model{
         }
 	    return FALSE;
     }
+	
+	public function getContainHS($text)
+	{
+		$this->db->like('name', $text);
+		$this->db->where('type','HEADSET');
+		$this->db->order_by("name", "asc");
+		$query = $this->db->get('product');
+		if($query->num_rows() > 0) {
+            foreach ($query->result_array() as $item) {
+                $data[] = $item;
+            }
+            return $data;
+        }
+	    return FALSE;
+    }
+	
+	
+	public function getContainGGM($text)
+	{
+			if($text == 'CORSAIR_M') 
+			{ 
+			$this->db->like('name', 'CORSAIR');
+			} 
+			elseif($text == 'SIGNO_M') 
+			{ 
+			$this->db->like('name', 'SIGNO');
+			}
+			elseif($text == 'STEELSERIES_M') 
+			{ 
+			$this->db->like('name', 'STEELSERIES');
+			}
+			
+		$this->db->where('type','MOUSE');
+		$this->db->order_by("name", "asc");
+		$query = $this->db->get('product');
+		if($query->num_rows() > 0) {
+            foreach ($query->result_array() as $item) {
+                $data[] = $item;
+            }
+            return $data;
+        }
+	    return FALSE;
+    }
+	
+	public function getContainGGK($text)
+	{
+			if($text == 'CORSAIR_K') 
+			{ 
+			$this->db->like('name', 'CORSAIR');
+			} 
+			elseif($text == 'SIGNO_K') 
+			{ 
+			$this->db->like('name', 'SIGNO');
+			}
+			elseif($text == 'STEELSERIES_K') 
+			{ 
+			$this->db->like('name', 'STEELSERIES');
+			}
+		
+		$this->db->where('type','KB');
+		$this->db->order_by("name", "asc");
+		$query = $this->db->get('product');
+		if($query->num_rows() > 0) {
+            foreach ($query->result_array() as $item) {
+                $data[] = $item;
+            }
+            return $data;
+        }
+	    return FALSE;
+    }
+	 
+	public function getDataPrice($price)
+	{
+		$prices = (double)$price;
+		if($prices <=15000)
+			$this->db->where('price <=', $price)->where('price >=', 0);
+		elseif($prices <=20000)
+			$this->db->where('price <=', $price)->where('price >=', 15000);
+		elseif($prices <=25000)
+			$this->db->where('price <=', $price)->where('price >=', 20000);
+		elseif($prices >25000)
+			$this->db->where('price >', 25000);
+			
+			$this->db->where('type','NB');
+			
+		$this->db->order_by("price", "asc");
+		$query = $this->db->get('product');
+		if($query->num_rows() > 0) {
+            foreach ($query->result_array() as $item) {
+                $data[] = $item;
+            }
+            return $data;
+        }
+	    return FALSE;
+    }
+	
+
 	
 	
 	
