@@ -19,6 +19,9 @@ class Home extends CI_Controller
     public function index($param)
     {
         //load view
+        if(($this->session->logged_in) && ($this->session->username == 'admin')){
+            redirect('product');
+        }
         $data = array();
         if (!empty($param)) {
             $this->load->model('product_model');

@@ -10,17 +10,8 @@ class Product_model extends CI_Model{
     public function getAll(){
         $query = $this->db->get('product');
         if ($query->num_rows() > 0) {
-            $data = array();
             foreach ($query->result_array() as $item) {
-                $data['product'][] = array(
-                    'id'    => $item['id'],
-                    'name'  => $item['name'],
-                    'price' => $item['price'],
-                    'quantity' => $item['quantity'],
-                    'type' => $item['type'],
-                    'description' => $item['description'],
-                    'image' => $item['image']
-                );
+                $data[] = $item;
             }
             return $data;
         }
@@ -148,7 +139,7 @@ class Product_model extends CI_Model{
     }
 
     public function getData($id){
-        $this->db->where('$id',$id);
+        $this->db->where('id',$id);
         $query = $this->db->get('product');
         if($query->num_rows() > 0){
             foreach ($query->result_array() as $item) {
@@ -161,11 +152,11 @@ class Product_model extends CI_Model{
 
 
     public function deleteData($id){
-        $this->db->where('$id',$id);
+        $this->db->where('id',$id);
         return $this->db->delete('product');
     }
 
-    public function updataData($id,$data){
+    public function updateData($id,$data){
         $this->db->where('id', $id);
         return $this->db->update('product', $data);
     }

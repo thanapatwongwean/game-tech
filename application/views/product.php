@@ -14,19 +14,19 @@ endif;?>
         <th>update</th>
         <th>delete</th>
     </tr>
-    <?php if(!empty($data)):?>
+    <?php foreach($product as $item):?>
         <tr>
-            <td><?php echo $product['id'];?></td>
-            <td><?php echo $product['name'];?></td>
-            <td><?php echo $product['price'];?></td>
-            <td><?php echo $product['quantity'];?></td>
-            <td><?php echo $product['type'];?></td>
-            <td><?php echo $product['decription'];?></td>
-            <td><a href="#">update</a></td>
-            <td><a href="#">delete</a></td>
+            <td><?php echo $item['id'];?></td>
+            <td><?php echo $item['name'];?></td>
+            <td><?php echo $item['price'];?></td>
+            <td><?php echo $item['quantity'];?></td>
+            <td><?php echo $item['type'];?></td>
+            <td><?php echo $item['description'];?></td>
+            <td><a href="<?= base_url('product/update');?>/<?= $item['id']; ?>">update</a></td>
+            <td><a href="<?= base_url('product/delete');?>/<?= $item['id']; ?>">delete</a></td>
         </tr>
-    <?php endif;?>
+    <?php endforeach;?>
 </table>
 <div class="text-center">
-    insert
+    <td><a href="<?= base_url('product/insert');?>">insert</a></td>
 </div>
