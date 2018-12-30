@@ -57,7 +57,19 @@ class Product_model extends CI_Model{
         }
         return FALSE;
     }
-
+	
+	public function getProduct($id){
+        $this->db->where('id',$id);
+        $query = $this->db->get('product');
+        if($query->num_rows() > 0){
+            foreach ($query->result_array() as $item) {
+                $data = $item;
+            }
+            return $data;
+        }
+        return FALSE;
+    }
+	
     public function deleteData($id){
         $this->db->where('id',$id);
         return $this->db->delete('product');

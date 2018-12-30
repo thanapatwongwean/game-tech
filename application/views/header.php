@@ -62,12 +62,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
                 <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
               </div>
               <div class="modal-body">
-                <form action="" method="post">
+                <form action="<?= base_url('Login');?>" method="post">
                   <div class="form-group">
-                    <input id="email" type="text" placeholder="email" class="form-control">
+                    <input id="email" name="email" type="text" placeholder="email" class="form-control">
                   </div>
                   <div class="form-group">
-                    <input id="password" type="password" placeholder="password" class="form-control">
+                    <input id="password" name="password" type="password" placeholder="password" class="form-control">
                   </div>
                   <p class="text-center">
                     <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
@@ -187,7 +187,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
               </li>
 			  <li class="nav-item dropdown menu-large"><a href="<?= base_url('contact'); ?>" data-delay="200" class="button-toggle nav-link">CONTACT<b class="caret"></b></a>
             </ul>
-            <div class="navbar-buttons d-flex justify-content-end">
+            <div class="navbar-buttons d-flex justify-content">
               <!-- /.nav-collapse-->
               <div id="search-not-mobile" class="navbar-collapse collapse"></div><a data-toggle="collapse" href="#" class="btn navbar-btn btn-primary d-none d-lg-inline-block"><span class="sr-only">Search</span><i class="fa fa-search"></i></a>
             </div>

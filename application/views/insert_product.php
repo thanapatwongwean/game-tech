@@ -1,11 +1,19 @@
 <main>
     <div class="col-lg-6">
         <div class="box">
-            <h2>Update Product</h2>
+            <h2>Insert Product</h2>
             <?php   if($this->session->flashdata("error")):
                 echo '<div style ="color:red;"><strong>'.$this->session->flashdata("error").'</strong></div><br>';
             endif;?>
             <?= form_open(base_url("product/insert"), 'class=""'); ?>
+			<div class="form-group">
+                <?php
+                echo form_label('Id', 'id');
+                echo '<br>';
+                $data = ['name' => 'id', 'id' => 'id', 'size' => '50' ,'class' => 'form-control'];
+                echo form_input($data);
+                ?>
+            </div>
             <div class="form-group">
                 <?php
                 echo form_label('Name', 'name');
