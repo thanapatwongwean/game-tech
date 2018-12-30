@@ -14,7 +14,7 @@
                   <h3 class="h4 card-title">User section</h3>
                 </div>
                 <div class="card-body">
-                  <ul class="nav nav-pills flex-column"><a href="#" class="nav-link active"><i class="fa fa-list"></i> My orders</a><a href="<?= base_url('user_acc'); ?>" class="nav-link"><i class="fa fa-user"></i> My account</a><a href="<?= base_url('logout');?>" class="nav-link"><i class="fa fa-sign-out"></i> Logout</a></ul>
+                  <ul class="nav nav-pills flex-column"><a href="<?= base_url('user'); ?>" class="nav-link active"><i class="fa fa-list"></i> My orders</a><a href="<?= base_url('user_acc'); ?>" class="nav-link"><i class="fa fa-user"></i> My account</a><a href="<?= base_url('logout');?>" class="nav-link"><i class="fa fa-sign-out"></i> Logout</a></ul>
                 </div>
               </div>
               <!-- /.col-lg-3-->
