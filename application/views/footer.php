@@ -42,7 +42,7 @@
             <!-- /.col-lg-3-->
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-3">Get touch on Social!</h4>
-                <p class="social"><a href="#" class="facebook external"><i class="fa fa-facebook"></i></a><a href="#" class="twitter external"><i class="fa fa-twitter"></i></a><a href="#" class="instagram external"><i class="fa fa-instagram"></i></a><a href="#" class="gplus external"><i class="fa fa-google-plus"></i></a><a href="#" class="email external"><i class="fa fa-envelope"></i></a></p>
+                <p class="social"><a href="https://www.facebook.com" class="facebook external"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/" class="twitter external"><i class="fa fa-twitter"></i></a><a href="https://www.instagram.com" class="instagram external"><i class="fa fa-instagram"></i></a><a href="https://plus.google.com" class="gplus external"><i class="fa fa-google-plus"></i></a><a href="https://github.com/thanapatwongwean/game-tech" class="git external"><i class="fa fa-git"></i></a></p>
             </div>
             <!-- /.col-lg-3-->
         </div>
