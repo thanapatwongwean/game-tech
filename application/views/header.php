@@ -38,10 +38,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
             <div class="col-lg-6 offer mb-3 mb-lg-0"><href="#" class="ml-1"></div>
             <div class="col-lg-6 text-center text-lg-right">
               <ul class="menu list-inline mb-0">
-                  <?php if($this->session->logged_in): ?>
-					  <li class="list-inline-item"><a href="<?= base_url('order'); ?>">Test Order</a></li>
-                      <li class="list-inline-item"><a href="<?= base_url('user'); ?>">Test user</a></li>
-                      <li class="list-inline-item"><a href="<?= base_url('cart'); ?>"><i class="fa fa-shopping-cart"></i>Test Cart</a></li>
+                  <?php if(($this->session->logged_in) && ($this->session->username == 'admin')): ?>
+					  <li class="list-inline-item"><a href="<?= base_url('order'); ?>">Order</a></li>
+                      <li class="list-inline-item"><a href="<?= base_url('user'); ?>">Setting</a></li>
+                      <li class="list-inline-item"><a href="<?= base_url('logout');?>">Logout</a></li>
+				  <?php elseif ($this->session->logged_in): ?>
+					  <li class="list-inline-item"><a href="<?= base_url('user'); ?>">Setting</a></li>
                       <li class="list-inline-item"><a href="<?= base_url('logout');?>">Logout</a></li>
                   <?php else: ?>
                       <?php if($this->session->flashdata("error")):

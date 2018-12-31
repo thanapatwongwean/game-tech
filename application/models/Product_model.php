@@ -238,4 +238,21 @@ class Product_model extends CI_Model{
         return FALSE;
     }
 
+    public function getImage($name){
+        $this->db->where('name',$name);
+        $data = $this->db->get('product');
+        if($data->num_rows() > 0){
+            return $data->row('image');
+        }
+    }
+
+    public function getPrice($name){
+        $this->db->where('name',$name);
+        $data = $this->db->get('product');
+        if($data->num_rows() > 0){
+            return $data->row('price');
+        }
+    }
+
+
 }
