@@ -87,7 +87,7 @@
                     <div class="col-lg-12 col">
                       <div class="form-group">
                           <?php
-                          echo form_label('Adress', 'address');
+                          echo form_label('Address', 'address');
                           $data = ['name' => 'address', 'id' => 'address' ,'class' => 'form-control','value' => $address];
                           echo form_textarea($data);
                           ?>
