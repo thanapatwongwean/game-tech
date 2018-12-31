@@ -22,7 +22,7 @@ class Cart extends CI_Controller{
         $this->load->view('form_cart',$data);
         $this->load->view('footer');
         //$this->load->view('cart/index', $data);
-		
+
 	}
 
 	public  function addCart($id){
