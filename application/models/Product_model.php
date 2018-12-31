@@ -3,7 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Product_model extends CI_Model{
     public function insert_product($data)    {
         return $this->db->insert('product', $data);
-    }
+	}
+
     public function getAll(){
         $this->db->order_by("id", "asc");
         $query = $this->db->get('product');

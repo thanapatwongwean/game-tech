@@ -15,6 +15,7 @@
                                 <div class="table-responsive mb-4">
                                     <table class="table">
                                         <tr>
+											<th>Product</th>
                                             <th>Name</th>
                                             <th>Description</th>
                                             <th>Price</th> 
@@ -26,8 +27,10 @@
                                         foreach($datas as $data):?>
                                             <tr>
                                                 <td>
-                                                    <img src="<?php echo $data['image']; ?>" >
+													<?php $images = $data['image']; ?>
+                                                    <img src="<?= base_url("public/images/uploads/$images") ?>" >
                                                 </td>
+
                                                 <td>
                                                     <?php $id = $data['id']; ?>
                                                     <a href = "<?= base_url("cart/addSpec/$param/$id");?>">

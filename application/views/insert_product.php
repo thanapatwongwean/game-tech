@@ -5,7 +5,7 @@
             <?php   if($this->session->flashdata("error")):
                 echo '<div style ="color:red;"><strong>'.$this->session->flashdata("error").'</strong></div><br>';
             endif;?>
-            <?= form_open(base_url("product/insert"), 'class=""'); ?>
+            <?= form_open_multipart(base_url("product/insert"), 'class=""'); ?>
             <div class="form-group">
                 <?php
                 echo form_label('Name', 'name');

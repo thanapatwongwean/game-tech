@@ -64,7 +64,7 @@ class Product extends CI_Controller{
 
             }else{
                 $uploadData = $this->upload->data();
-                $image = $uploadData['full_path'];
+                $image = $uploadData['file_name'];
             }
 
                 $data = array(
@@ -122,6 +122,7 @@ class Product extends CI_Controller{
 
             $this->load->library('upload',$config);
             $image = 0;
+			
             if($this->upload->do_upload('image') == false){
 
                     $this->session->set_flashdata('error_validation','file is cannot upload or file is null');
@@ -130,7 +131,7 @@ class Product extends CI_Controller{
 
             }else{
                 $uploadData = $this->upload->data();
-                $image = $uploadData['full_path'];
+                $image = $uploadData['file_name'];
             }
             $data = array(
                 'name' => $submit_data['name'],
