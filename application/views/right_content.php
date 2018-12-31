@@ -103,21 +103,29 @@
                                 <div class="table-responsive mb-4">
                                     <table class="table">
                                         <tr>
-                                            <th>Name</th>
+                                            <th>Product</th> 
+											<th>Name</th>
                                             <th>Description</th>
                                             <th>Price</th> 
 											<th>Cart</th>
                                         </tr>
 										<!-- PC -->
                                         <?php
-                                        foreach($datas as $data){
-                                            echo'<tr><td>';
-                                            echo '<a href="#">';
-                                            echo $data['name'].'</a></td><td>';
-                                            echo $data['description'].'</td><td>';
-                                            echo $data['price'].'</td><td>'; 
-											echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
-                                        }?>
+                                        foreach($datas as $data):?>
+                                            <tr>
+                                                <td>
+													<?php $images = $data['image']; ?>
+                                                    <img src="<?= base_url("public/images/uploads/$images") ?>" >
+                                                </td>
+
+                                                <td>
+                                                    <?php $id = $data['id']; ?>
+                                                    <a href = "<?= base_url("cart/addSpec/$param/$id");?>">
+                                                        <?php echo $data['name'];?></a></td><td>
+                                                        <?php echo $data['description'].'</td><td>';?>
+                                                        <?php echo $data['price'].'</td><td>';?>
+                                                        <?php echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';?>
+                                        <?php endforeach;?>
 
                                     </table>
                                 </div>
@@ -130,21 +138,29 @@
                                 <div class="table-responsive mb-4">
                                     <table class="table">
                                         <tr>
-                                            <th>Name</th>
+                                            <th>Product</th> 
+											<th>Name</th>
                                             <th>Description</th>
                                             <th>Price</th> 
 											<th>Cart</th>
                                         </tr>
 										<!-- PC -->
                                         <?php
-                                        foreach($datas as $data){
-                                            echo'<tr><td>';
-                                            echo '<a href="#">';
-                                            echo $data['name'].'</a></td><td>';
-                                            echo $data['description'].'</td><td>';
-                                            echo $data['price'].'</td><td>'; 
-											echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
-                                        }?>
+                                        foreach($datas as $data):?>
+                                            <tr>
+                                                <td>
+													<?php $images = $data['image']; ?>
+                                                    <img src="<?= base_url("public/images/uploads/$images") ?>" >
+                                                </td>
+
+                                                <td>
+                                                    <?php $id = $data['id']; ?>
+                                                    <a href = "<?= base_url("cart/addSpec/$param/$id");?>">
+                                                        <?php echo $data['name'];?></a></td><td>
+                                                        <?php echo $data['description'].'</td><td>';?>
+                                                        <?php echo $data['price'].'</td><td>';?>
+                                                        <?php echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';?>
+                                        <?php endforeach;?>
 
                                     </table>
                                 </div>
@@ -162,19 +178,28 @@
 						<div class="table-responsive mb-4">
                         <table class="table">
                             <tr>
-                        <th>Name</th>
+                        <th>Product</th> 
+						<th>Name</th>
                         <th>Description</th>
                         <th>Price</th> 
 						<th>Cart</th>
                             </tr>
                             <?php
-                            foreach($datas as $data){
-                                echo'<tr><td>';
-                                echo $data['name'].'</td><td>';
-                                echo $data['description'].'</td><td>';
-                                echo $data['price'].'</td><td>'; 
-								echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
-                            }?>
+                                        foreach($datas as $data):?>
+                                            <tr>
+                                                <td>
+													<?php $images = $data['image']; ?>
+                                                    <img src="<?= base_url("public/images/uploads/$images") ?>" >
+                                                </td>
+
+                                                <td>
+                                                    <?php $id = $data['id']; ?>
+                                                    <a href = "<?= base_url("cart/addSpec/$param/$id");?>">
+                                                        <?php echo $data['name'];?></a></td><td>
+                                                        <?php echo $data['description'].'</td><td>';?>
+                                                        <?php echo $data['price'].'</td><td>';?>
+                                                        <?php echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';?>
+                                        <?php endforeach;?>
 
                         </table>
 						</div>
@@ -187,19 +212,28 @@
 						<div class="table-responsive mb-4">
                         <table class="table">
                             <tr>
-                        <th>Name</th>
+                        <th>Product</th> 
+						<th>Name</th>
                         <th>Description</th>
                         <th>Price</th> 
 						<th>Cart</th>
                             </tr>
                             <?php
-                            foreach($datas as $data){
-                                echo'<tr><td>';
-                                echo $data['name'].'</td><td>';
-                                echo $data['description'].'</td><td>';
-                                echo $data['price'].'</td><td>'; 
-								echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
-                            }?>
+                                        foreach($datas as $data):?>
+                                            <tr>
+                                                <td>
+													<?php $images = $data['image']; ?>
+                                                    <img src="<?= base_url("public/images/uploads/$images") ?>" >
+                                                </td>
+
+                                                <td>
+                                                    <?php $id = $data['id']; ?>
+                                                    <a href = "<?= base_url("cart/addSpec/$param/$id");?>">
+                                                        <?php echo $data['name'];?></a></td><td>
+                                                        <?php echo $data['description'].'</td><td>';?>
+                                                        <?php echo $data['price'].'</td><td>';?>
+                                                        <?php echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';?>
+                                        <?php endforeach;?>
 
                         </table>
 						</div>
@@ -212,19 +246,28 @@
 						<div class="table-responsive mb-4">
                         <table class="table">
                             <tr>
-                        <th>Name</th>
+                        <th>Product</th> 
+						<th>Name</th>
                         <th>Description</th>
                         <th>Price</th> 
 						<th>Cart</th>
                             </tr>
                             <?php
-                            foreach($datas as $data){
-                                echo'<tr><td>';
-                                echo $data['name'].'</td><td>';
-                                echo $data['description'].'</td><td>';
-                                echo $data['price'].'</td><td>'; 
-								echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
-                            }?>
+                                        foreach($datas as $data):?>
+                                            <tr>
+                                                <td>
+													<?php $images = $data['image']; ?>
+                                                    <img src="<?= base_url("public/images/uploads/$images") ?>" >
+                                                </td>
+
+                                                <td>
+                                                    <?php $id = $data['id']; ?>
+                                                    <a href = "<?= base_url("cart/addSpec/$param/$id");?>">
+                                                        <?php echo $data['name'];?></a></td><td>
+                                                        <?php echo $data['description'].'</td><td>';?>
+                                                        <?php echo $data['price'].'</td><td>';?>
+                                                        <?php echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';?>
+                                        <?php endforeach;?>
 
                         </table>
 						</div>
@@ -237,19 +280,28 @@
 						<div class="table-responsive mb-4">
                         <table class="table">
                             <tr>
-                        <th>Name</th>
+                        <th>Product</th> 
+						<th>Name</th>
                         <th>Description</th>
                         <th>Price</th> 
 						<th>Cart</th>
                             </tr>
                             <?php
-                            foreach($datas as $data){
-                                echo'<tr><td>';
-                                echo $data['name'].'</td><td>';
-                                echo $data['description'].'</td><td>';
-                                echo $data['price'].'</td><td>'; 
-								echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
-                            }?>
+                                        foreach($datas as $data):?>
+                                            <tr>
+                                                <td>
+													<?php $images = $data['image']; ?>
+                                                    <img src="<?= base_url("public/images/uploads/$images") ?>" >
+                                                </td>
+
+                                                <td>
+                                                    <?php $id = $data['id']; ?>
+                                                    <a href = "<?= base_url("cart/addSpec/$param/$id");?>">
+                                                        <?php echo $data['name'];?></a></td><td>
+                                                        <?php echo $data['description'].'</td><td>';?>
+                                                        <?php echo $data['price'].'</td><td>';?>
+                                                        <?php echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';?>
+                                        <?php endforeach;?>
 
                         </table>
 						</div>
@@ -271,7 +323,7 @@
                       </div>
                     </div><a href="#" ><img src="public/images/cpu.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
-                      <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
+                      
                       <p class="price"> 
                         <del></del>10500฿
                       </p>
@@ -291,7 +343,7 @@
                       </div>
                     </div><a href="#" ><img src="public/images/mainboard.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
-                      <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
+                      
                       <p class="price"> 
                         <del></del>10500฿
                       </p>
@@ -311,7 +363,7 @@
                       </div>
                     </div><a href="#" ><img src="public/images/ram.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
-                      <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
+                      
                       <p class="price"> 
                         <del></del>10500฿
                       </p>
@@ -331,7 +383,7 @@
                       </div>
                     </div><a href="#" ><img src="public/images/vga.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
-                      <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
+                      
                       <p class="price"> 
                         <del></del>10500฿
                       </p>
@@ -351,7 +403,7 @@
                       </div>
                     </div><a href="#" ><img src="public/images/hdd.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
-                      <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
+                      
                       <p class="price"> 
                         <del></del>10500฿
                       </p>
@@ -371,7 +423,7 @@
                       </div>
                     </div><a href="#" ><img src="public/images/ssd.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
-                      <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
+                      
                       <p class="price"> 
                         <del></del>10500฿
                       </p>
@@ -391,7 +443,7 @@
                       </div>
                     </div><a href="#" ><img src="public/images/cooling.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
-                      <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
+                      
                       <p class="price"> 
                         <del></del>10500฿
                       </p>
@@ -411,7 +463,7 @@
                       </div>
                     </div><a href="#" ><img src="public/images/psu.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
-                      <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
+                      
                       <p class="price"> 
                         <del></del>10500฿
                       </p>
@@ -431,7 +483,7 @@
                       </div>
                     </div><a href="#" ><img src="public/images/case.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
-                      <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
+                      
                       <p class="price"> 
                         <del></del>10500฿
                       </p>
