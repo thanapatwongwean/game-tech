@@ -50,7 +50,7 @@ class Product extends CI_Controller{
 
         if($this->form_validation->run()){
 
-            $config['upload_path']          = './public/images/uploads';
+            $config['upload_path']          = 'public/images/uploads';
             $config['allowed_types']        = 'gif|jpg|png';
             $config['max_size']             = 512;
             $config['overwrite'] = TRUE;
@@ -114,7 +114,7 @@ class Product extends CI_Controller{
 
         if($this->form_validation->run()){
 
-            $config['upload_path']          = './public/images/uploads';
+            $config['upload_path']          = 'public/images/uploads';
             $config['allowed_types']        = 'gif|jpg|png';
             $config['max_size']             = 512;
             $config['file_name'] = $_FILES['image']['name'];

@@ -26,6 +26,9 @@
                                         foreach($datas as $data):?>
                                             <tr>
                                                 <td>
+                                                    <img src="<?php echo $data['image']; ?>" >
+                                                </td>
+                                                <td>
                                                     <?php $id = $data['id']; ?>
                                                     <a href = "<?= base_url("cart/addSpec/$param/$id");?>">
                                                         <?php echo $data['name'];?></a></td><td>
