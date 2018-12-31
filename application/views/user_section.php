@@ -32,7 +32,6 @@
                         <th>Date</th>
                         <th>Total</th>
                         <th>Status</th>
-                        <th>Action</th>
                       </tr>
                     </thead>
                       <?php if(!empty($orders)):?>
@@ -51,9 +50,6 @@
                                 <span class="badge badge-danger"><?php echo $item['status'];?></span>
                         </td>
                             <?php endif;?>
-                        <td>
-                              <a href="#" class="btn btn-primary btn-sm">View</a>
-                        </td>
                       </tr>
                       <?php endforeach;?>
                       <?php endif;?>
