@@ -39,6 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');?><!DOCTYPE html>
             <div class="col-lg-6 text-center text-lg-right">
               <ul class="menu list-inline mb-0">
                   <?php if($this->session->logged_in): ?>
+					  <li class="list-inline-item"><a href="<?= base_url('order'); ?>">Test Order</a></li>
                       <li class="list-inline-item"><a href="<?= base_url('user'); ?>">Test user</a></li>
                       <li class="list-inline-item"><a href="<?= base_url('cart'); ?>"><i class="fa fa-shopping-cart"></i>Test Cart</a></li>
                       <li class="list-inline-item"><a href="<?= base_url('logout');?>">Logout</a></li>
