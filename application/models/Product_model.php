@@ -217,7 +217,14 @@ class Product_model extends CI_Model{
         return FALSE;
     }
 
-
+    public function getDataFromId($id){
+        $this->db->where('id',$id);
+        $data = $this->db->get('product');
+        if ($data->num_rows() > 0) {
+            return $data->row();
+        }
+        return FALSE;
+    }
 
 
 }
