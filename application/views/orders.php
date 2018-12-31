@@ -15,7 +15,7 @@
 		<th></th>
     </tr>
     <?php if(!empty($orders)):?>
-	<h2 class="h2 card-title">Customer section</h2>
+	<h2 class="h2 card-title">Admin Order Management</h2>
         <?php foreach($orders as $item):?>
             <tr>
                 <td><?php echo $item['orderid'];?></td>
