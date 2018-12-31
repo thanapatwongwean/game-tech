@@ -261,7 +261,7 @@
                         <div class="front"><a href="#"><img src="public/images/product.jpg" alt="" class="img-fluid"></a></div>
                         <div class="back"><a href="#"><img src="ipublic/images/product.jpg" alt="" class="img-fluid"></a></div>
                       </div>
-                    </div><a href="#" class="invisible"><img src="public/images/product.jpg" alt="" class="img-fluid"></a>
+                    </div><a href="#" class="invisible"><img src="public/images/productdefault.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
                       <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
                       <p class="price"> 
@@ -281,7 +281,7 @@
                         <div class="front"><a href="#"><img src="public/images/product.jpg" alt="" class="img-fluid"></a></div>
                         <div class="back"><a href="#"><img src="ipublic/images/product.jpg" alt="" class="img-fluid"></a></div>
                       </div>
-                    </div><a href="#" class="invisible"><img src="public/images/product.jpg" alt="" class="img-fluid"></a>
+                    </div><a href="#" class="invisible"><img src="public/images/productdefault.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
                       <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
                       <p class="price"> 
@@ -301,7 +301,7 @@
                         <div class="front"><a href="#"><img src="public/images/product.jpg" alt="" class="img-fluid"></a></div>
                         <div class="back"><a href="#"><img src="ipublic/images/product.jpg" alt="" class="img-fluid"></a></div>
                       </div>
-                    </div><a href="#" class="invisible"><img src="public/images/product.jpg" alt="" class="img-fluid"></a>
+                    </div><a href="#" class="invisible"><img src="public/images/productdefault.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
                       <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
                       <p class="price"> 
@@ -321,7 +321,7 @@
                         <div class="front"><a href="#"><img src="public/images/product.jpg" alt="" class="img-fluid"></a></div>
                         <div class="back"><a href="#"><img src="ipublic/images/product.jpg" alt="" class="img-fluid"></a></div>
                       </div>
-                    </div><a href="#" class="invisible"><img src="public/images/product.jpg" alt="" class="img-fluid"></a>
+                    </div><a href="#" class="invisible"><img src="public/images/productdefault.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
                       <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
                       <p class="price"> 
@@ -341,7 +341,7 @@
                         <div class="front"><a href="#"><img src="public/images/product.jpg" alt="" class="img-fluid"></a></div>
                         <div class="back"><a href="#"><img src="ipublic/images/product.jpg" alt="" class="img-fluid"></a></div>
                       </div>
-                    </div><a href="#" class="invisible"><img src="public/images/product.jpg" alt="" class="img-fluid"></a>
+                    </div><a href="#" class="invisible"><img src="public/images/productdefault.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
                       <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
                       <p class="price"> 
@@ -361,7 +361,7 @@
                         <div class="front"><a href="#"><img src="public/images/product.jpg" alt="" class="img-fluid"></a></div>
                         <div class="back"><a href="#"><img src="ipublic/images/product.jpg" alt="" class="img-fluid"></a></div>
                       </div>
-                    </div><a href="#" class="invisible"><img src="public/images/product.jpg" alt="" class="img-fluid"></a>
+                    </div><a href="#" class="invisible"><img src="public/images/productdefault.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
                       <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
                       <p class="price"> 
@@ -381,7 +381,7 @@
                         <div class="front"><a href="#"><img src="public/images/product.jpg" alt="" class="img-fluid"></a></div>
                         <div class="back"><a href="#"><img src="ipublic/images/product.jpg" alt="" class="img-fluid"></a></div>
                       </div>
-                    </div><a href="#" class="invisible"><img src="public/images/product.jpg" alt="" class="img-fluid"></a>
+                    </div><a href="#" class="invisible"><img src="public/images/productdefault.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
                       <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
                       <p class="price"> 
@@ -401,7 +401,7 @@
                         <div class="front"><a href="#"><img src="public/images/product.jpg" alt="" class="img-fluid"></a></div>
                         <div class="back"><a href="#"><img src="ipublic/images/product.jpg" alt="" class="img-fluid"></a></div>
                       </div>
-                    </div><a href="#" class="invisible"><img src="public/images/product.jpg" alt="" class="img-fluid"></a>
+                    </div><a href="#" class="invisible"><img src="public/images/productdefault.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
                       <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
                       <p class="price"> 
@@ -421,7 +421,7 @@
                         <div class="front"><a href="#"><img src="public/images/product.jpg" width="450" height="600" alt="" class="img-fluid"></a></div>
                         <div class="back"><a href="#"><img src="ipublic/images/product.jpg" alt="" class="img-fluid"></a></div>
                       </div>
-                    </div><a href="#" class="invisible"><img src="public/images/product.jpg" alt="" class="img-fluid"></a>
+                    </div><a href="#" class="invisible"><img src="public/images/productdefault.jpg" alt="" class="img-fluid"></a>
                     <div class="text">
                       <h3><a href="#">CPU (ซีพียู) AMD AM4 RYZEN7 2700 3.2 GHz</a></h3>
                       <p class="price"> 
