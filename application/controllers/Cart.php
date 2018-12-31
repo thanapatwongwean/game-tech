@@ -21,4 +21,16 @@ class Cart extends CI_Controller{
 		
 	}
 
+	public function addCart($id){
+        if(!($this->session->has_userdata('cart'))){
+            $cart[] = '';
+            $this->session->set_userdata('cart',$cart);
+        }
+        $cart = $this->session->userdata('cart');
+        $cart[] =  $id;
+        $this->session->set_userdata('cart',$cart);
+        redirect('/');
+
+    }
+
 }
