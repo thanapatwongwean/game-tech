@@ -23,14 +23,16 @@
                                         </tr>
 										<!-- PC -->
                                         <?php
-                                        foreach($datas as $data){
-                                            echo'<tr><td>';
-											echo '<a href="#">'; 
-                                            echo $data['name'].'</a></td><td>';
-                                            echo $data['description'].'</td><td>';
-                                            echo $data['price'].'</td><td>';
-											echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';
-                                        }?>
+                                        foreach($datas as $data):?>
+                                            <tr>
+                                                <td>
+                                                    <?php $id = $data['id']; ?>
+                                                    <a href = "<?= base_url("cart/addSpec/$param/$id");?>">
+                                                        <?php echo $data['name'];?></a></td><td>
+                                                        <?php echo $data['description'].'</td><td>';?>
+                                                        <?php echo $data['price'].'</td><td>';?>
+                                                        <?php echo '<a href="#"><i class="fa fa-shopping-cart"></i></a></td></tr>';?>
+                                        <?php endforeach;?>
                                     </table>
                                 </div>
                             </div>

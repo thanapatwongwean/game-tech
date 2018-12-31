@@ -16,7 +16,6 @@ class Product_model extends CI_Model{
         return FALSE;
     }
 
-	
     public  function getData($type){
         $this->db->where('type',$type);
         $this->db->order_by("name", "asc");
@@ -29,6 +28,7 @@ class Product_model extends CI_Model{
         }
         return FALSE;
     }
+
     public function getContain($text)
     {
         $this->db->like('name', $text);
@@ -228,5 +228,13 @@ class Product_model extends CI_Model{
         return FALSE;
     }
 
+    public function getNamefromId($id){
+        $this->db->where('id',$id);
+        $data = $this->db->get('product');
+        if($data->num_rows() > 0){
+            return $data->row('name');
+        }
+        return FALSE;
+    }
 
 }

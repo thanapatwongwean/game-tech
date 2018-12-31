@@ -67,4 +67,6 @@ class Order_model extends CI_Model{
         return $this->db->delete('orders');
     }
 
+
+
 }

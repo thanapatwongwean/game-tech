@@ -16,7 +16,7 @@ class Cart extends CI_Controller{
     public function index()
 	{
 
-        $data['items'] = array_values(unserialize($this->session->userdata('cart')));
+        $data['items'] = is_array(unserialize($this->session->userdata('cart')) )? array_values(unserialize($this->session->userdata('cart'))):array();
         $data['total'] = $this->total();
         $this->load->view('header');
         $this->load->view('form_cart',$data);
@@ -48,7 +48,7 @@ class Cart extends CI_Controller{
                 $this->session->set_userdata('cart', serialize($cart));
             }
         }
-        redirect('/');
+        echo "javascript:history.go(-1)";
     }
 
     private function buySet($id)
@@ -93,58 +93,67 @@ class Cart extends CI_Controller{
                 if($this->session->has_userdata('CPU')){
                     $this->session->unset_userdata('CPU');
                 }
-                $this->session->set_userdata('CPU',$id);
+                $data = $this->product_model->getNamefromId($id);
+                $this->session->set_userdata('CPU',$data);
                 break;
             case'MB':
                 if($this->session->has_userdata('MB')){
                     $this->session->unset_userdata('MB');
                 }
-                $this->session->set_userdata('MB',$id);
+                $data = $this->product_model->getNamefromId($id);
+                $this->session->set_userdata('MB',$data);
                 break;
             case'RAM':
                 if($this->session->has_userdata('RAM')){
                     $this->session->unset_userdata('RAM');
                 }
-                $this->session->set_userdata('RAM',$id);
+                $data = $this->product_model->getNamefromId($id);
+                $this->session->set_userdata('RAM',$data);
                 break;
             case'VGA':
                 if($this->session->has_userdata('VGA')){
                     $this->session->unset_userdata('VGA');
                 }
-                $this->session->set_userdata('VGA',$id);
+                $data = $this->product_model->getNamefromId($id);
+                $this->session->set_userdata('VGA',$data);
                 break;
             case'HDD':
                 if($this->session->has_userdata('HDD')){
                     $this->session->unset_userdata('HDD');
                 }
-                $this->session->set_userdata('HDD',$id);
+                $data = $this->product_model->getNamefromId($id);
+                $this->session->set_userdata('HDD',$data);
                 break;
             case'SSD':
                 if($this->session->has_userdata('SSD')){
                     $this->session->unset_userdata('SSD');
                 }
-                $this->session->set_userdata('SSD',$id);
+                $data = $this->product_model->getNamefromId($id);
+                $this->session->set_userdata('SSD',$data);
                 break;
             case'CASE':
                 if($this->session->has_userdata('CASE')){
                     $this->session->unset_userdata('CASE');
                 }
-                $this->session->set_userdata('CASE',$id);
+                $data = $this->product_model->getNamefromId($id);
+                $this->session->set_userdata('CASE',$data);
                 break;
             case'PSU':
                 if($this->session->has_userdata('PSU')){
                     $this->session->unset_userdata('PSU');
                 }
-                $this->session->set_userdata('PSU',$id);
+                $data = $this->product_model->getNamefromId($id);
+                $this->session->set_userdata('PSU',$data);
                 break;
             case'COOL':
                 if($this->session->has_userdata('COOL')){
                     $this->session->unset_userdata('COOL');
                 }
-                $this->session->set_userdata('COOL',$id);
+                $data = $this->product_model->getNamefromId($id);
+                $this->session->set_userdata('COOL',$data);
                 break;
         }
-        redirect('/');
+        redirect("home/$type");
     }
 
     public function buyCartAll(){
@@ -168,7 +177,7 @@ class Cart extends CI_Controller{
         $this->buySet($data['CASE']);
         $this->buySet($data['PSU']);
         $this->buySet($data['COOL']);
-        redirect('/');
+        echo "javascript:history.go(-1)";
 
     }
 
@@ -184,7 +193,7 @@ class Cart extends CI_Controller{
     }
 
     private function total() {
-        $items = array_values(unserialize($this->session->userdata('cart')));
+        $items = is_array(unserialize($this->session->userdata('cart')))?array_values(unserialize($this->session->userdata('cart'))):array();;
         $s = 0;
         foreach ($items as $item) {
             $s += $item['price'] * $item['quantity'];
