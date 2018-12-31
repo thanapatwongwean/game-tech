@@ -20,7 +20,7 @@
                         <p class="text-muted"><?php echo $this->session->PSU;?></p></a>
                     <a href="<?= base_url('Home/');?>CASE" class="nav-link"><i class="fa fa-align-justify"></i> Case
                         <p class="text-muted"><?php echo $this->session->CASE;?></p></a>
-                    <a href="<?= base_url('Home/');?>" class="nav-link">
+                    <a href="<?= base_url('');?>" class="nav-link">
                         <div class="col-md-12 text-center">
                             <button type="submit" class="btn btn-primary">Build</button>
                         </div></a>
