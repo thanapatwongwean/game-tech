@@ -19,7 +19,6 @@
                         </tr>
                       </thead>
                       <tbody>
-
                         <tr>
                           <td><a href="#"><img src="public/images/AjaxLoader.gif" alt="Product image"></a></td>
                           <td><a href="#">CPU (ซีพียู) INTEL 1151 CELERON G4900 3.10 GHzi</a></td>

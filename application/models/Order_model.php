@@ -9,17 +9,42 @@ class Order_model extends CI_Model{
 
     }
 
-    public  function  getOrder($username){
-        $this->db->where('username',$username);
-        $data = $this->db->get('order');
+    public  function  getOrder($id){
+        $this->db->where('orderid',$id);
+        $data = $this->db->get('orders');
         if($data->num_rows() > 0){
-            foreach ($data>result_array() as $item) {
+            foreach ($data->result_array() as $item) {
                 $orders[] = $item;
             }
             return $orders;
         }
         return false;
 
+    }
+
+    public function getOrderfromUsername($username){
+        $this->db->where("username", $username);
+        $this->db->order_by("orderid", "asc");
+        $query = $this->db->get('orders');
+        if ($query->num_rows() > 0) {
+            foreach ($query->result_array() as $item) {
+                $data[] = $item;
+            }
+            return $data;
+        }
+        return FALSE;
+    }
+
+    public function getOrderAll(){
+        $this->db->order_by("orderid", "asc");
+        $query = $this->db->get('orders');
+        if ($query->num_rows() > 0) {
+            foreach ($query->result_array() as $item) {
+                $data[] = $item;
+            }
+            return $data;
+        }
+        return FALSE;
     }
 
     public function insert_order($data){

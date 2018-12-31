@@ -13,10 +13,14 @@ class User extends CI_Controller{
 
     public function index()
 	{
-		$this->load->view('header');
-        $this->load->view('user_section');
+	    if(!($this->session->logged_in)){
+            redirect('check');
+        }
+        $this->load->model('order_model');
+        $data['orders'] = $this->order_model->getOrderfromUsername($this->session->userdata('username'));
+        $this->load->view('header');
+        $this->load->view('user_section',$data);
         $this->load->view('footer');
-		
 	}
 
 }

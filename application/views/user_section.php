@@ -28,35 +28,35 @@
                   <table class="table table-hover">
                     <thead>
                       <tr>
-                        <th>Order</th>
+                        <th>OrderID</th>
                         <th>Date</th>
                         <th>Total</th>
                         <th>Status</th>
                         <th>Action</th>
                       </tr>
                     </thead>
+                      <?php if(!empty($orders)):?>
+                      <?php foreach($orders as $item):?>
                     <tbody>
 					  <tr>
-                        <th>#0002</th>
-                        <td>29/12/2018</td>
+                        <th><?php echo $item['orderid'];?></th>
+                        <td><?php echo $item['date'];?></td>
                         <td>1550.00฿</td>
-                        <td><span class="badge badge-success">Received</span></td>
-                        <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
+                        <td>
+                            <?php if($item['status'] == 'received'):?>
+                                <span class="badge badge-success"><?php echo $item['status'];?></span>
+                            <?php elseif($item['status'] == 'preparing'):?>
+                                <span class="badge badge-info"><?php echo $item['status'];?></span>
+                            <?php else:?>
+                                <span class="badge badge-danger"><?php echo $item['status'];?></span>
+                        </td>
+                            <?php endif;?>
+                        <td>
+                              <a href="#" class="btn btn-primary btn-sm">View</a>
+                        </td>
                       </tr>
-                      <tr>
-                        <th>#0001</th>
-                        <td>29/12/2018</td>
-                        <td>1234567.00฿</td>
-                        <td><span class="badge badge-info">Preparing</span></td>
-                        <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
-                      </tr>
-                      <tr>
-                        <th>#0000</th>
-                        <td>28/12/2018</td>
-                        <td>1234567.00฿</td>
-                        <td><span class="badge badge-danger">Cancelled</span></td>
-                        <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
-                      </tr>
+                      <?php endforeach;?>
+                      <?php endif;?>
                     </tbody>
                   </table>
                 </div>

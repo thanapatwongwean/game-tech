@@ -15,18 +15,7 @@ class Product_model extends CI_Model{
         }
         return FALSE;
     }
-	
-	public function getOrder(){
-        $this->db->order_by("orderid", "asc");
-        $query = $this->db->get('orders');
-        if ($query->num_rows() > 0) {
-            foreach ($query->result_array() as $item) {
-                $data[] = $item;
-            }
-            return $data;
-        }
-        return FALSE;
-    }
+
 	
     public  function getData($type){
         $this->db->where('type',$type);
@@ -133,11 +122,6 @@ class Product_model extends CI_Model{
     public function updateData($id,$data){
         $this->db->where('id', $id);
         return $this->db->update('product', $data);
-    }
-	
-	public function updateOrder($id,$status,$data){
-        $this->db->where('orderid', $orderid);
-        return $this->db->update('orders', $data);
     }
 
     public function getContainHS($text)
