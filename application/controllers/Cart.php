@@ -16,7 +16,8 @@ class Cart extends CI_Controller{
     public function index()
 	{
 
-        $data['items'] = array_values(unserialize($this->session->userdata('cart')));
+        //$data['items'] = array_values(unserialize($this->session->userdata('cart')));
+		$data['items'] = is_array(unserialize($this->session->userdata('cart')))?array_values(unserialize($this->session->userdata('cart'))):array();
         $data['total'] = $this->total();
         $this->load->view('header');
         $this->load->view('form_cart',$data);
@@ -184,8 +185,9 @@ class Cart extends CI_Controller{
     }
 
     private function total() {
-        $items = array_values(unserialize($this->session->userdata('cart')));
-        $s = 0;
+        //$items = array_values(unserialize($this->session->userdata('cart')));
+        $items = is_array(unserialize($this->session->userdata('cart')))?array_values(unserialize($this->session->userdata('cart'))):array();;
+		$s = 0;
         foreach ($items as $item) {
             $s += $item['price'] * $item['quantity'];
         }
