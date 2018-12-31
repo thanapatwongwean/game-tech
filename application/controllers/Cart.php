@@ -9,34 +9,81 @@ class Cart extends CI_Controller{
         parent::__construct();
         // Load [form,url] helper
         $this->load->helper(['form','url']);
+        $this->load->library('cart');
+        $this->load->model('product_model');
     }
 
     public function index()
 	{
-        $cart = $this->session->userdata('cart');
-        $this->load->model(Product_model);
-        foreach ($cart as $id){
-            $data['product'][] = $this->product_model->getData($id);
-        }
-		$this->load->view('header');
+
+        $data['items'] = array_values(unserialize($this->session->userdata('cart')));
+        $data['total'] = $this->total();
+        $this->load->view('header');
         $this->load->view('form_cart',$data);
         $this->load->view('footer');
+        //$this->load->view('cart/index', $data);
 		
 	}
 
-	public function addCart($id){
-        if(!($this->session->has_userdata('cart'))){
-            $cart[] = '';
-            $this->session->set_userdata('cart',$cart);
+	public  function addCart($id){
+        $product = $this->product_model->getgetDataFromId($id);
+        $item = array(
+            'id' => $product->id,
+            'name' => $product->name,
+            'image' => $product->image,
+            'price' => $product->price,
+            'quantity' => 1
+        );
+        if(!$this->session->has_userdata('cart')) {
+            $cart = array($item);
+            $this->session->set_userdata('cart', serialize($cart));
+        } else {
+            $index = $this->exists($id);
+            $cart = array_values(unserialize($this->session->userdata('cart')));
+            if($index == -1) {
+                array_push($cart, $item);
+                $this->session->set_userdata('cart', serialize($cart));
+            } else {
+                $cart[$index]['quantity']++;
+                $this->session->set_userdata('cart', serialize($cart));
+            }
         }
-        $cart = $this->session->userdata('cart');
-        $newCart[] = '';
-        foreach ($cart as $c)
-        $newCart[] = $c;
-        $this->session->unset_userdata('cart');
-        $this->session->set_userdata('cart',$newCart);
         redirect('/');
+    }
 
+    private function buySet($id)
+    {
+        $product = $this->product_model->getgetDataFromId($id);
+        $item = array(
+            'id' => $product->id,
+            'name' => $product->name,
+            'image' => $product->image,
+            'price' => $product->price,
+            'quantity' => 1
+        );
+        if(!$this->session->has_userdata('cart')) {
+            $cart = array($item);
+            $this->session->set_userdata('cart', serialize($cart));
+        } else {
+            $index = $this->exists($id);
+            $cart = array_values(unserialize($this->session->userdata('cart')));
+            if($index == -1) {
+                array_push($cart, $item);
+                $this->session->set_userdata('cart', serialize($cart));
+            } else {
+                $cart[$index]['quantity']++;
+                $this->session->set_userdata('cart', serialize($cart));
+            }
+        }
+    }
+
+    public function remove($id)
+    {
+        $index = $this->exists($id);
+        $cart = array_values(unserialize($this->session->userdata('cart')));
+        unset($cart[$index]);
+        $this->session->set_userdata('cart', serialize($cart));
+        redirect('cart');
     }
 
 
@@ -86,7 +133,7 @@ class Cart extends CI_Controller{
                 break;
             case'PSU':
                 if($this->session->has_userdata('PSU')){
-                    $this->session->unset_userdata('pSU');
+                    $this->session->unset_userdata('PSU');
                 }
                 $this->session->set_userdata('PSU',$id);
                 break;
@@ -100,36 +147,49 @@ class Cart extends CI_Controller{
         redirect('/');
     }
 
-    public function addCartAll($data){
-        if(!($this->session->has_userdata('cart'))){
-            $cart[] = '';
-            $this->session->set_userdata('cart',$cart);
-        }
-        $cart = $this->session->userdata('cart');
-        $newCart[] = '';
-        foreach ($data as $item){
-            $newCart[] = $item;
-        }
-        foreach ($cart as $item){
-            $newCart[] = $item;
-        }
-        $this->session->unset_userdata('cart');
-        $this->session->set_userdata('cart',$newCart);
+    public function buyCartAll(){
+        $data = [
+            'CPU' => $this->session->userdata('CPU'),
+            'MB' => $this->session->userdata('MB'),
+            'MB' => $this->session->userdata('RAM'),
+            'VGA' => $this->session->userdata('VGA'),
+            'HDD' => $this->session->userdata('HDD'),
+            'SSD' => $this->session->userdata('SSD'),
+            'CASE' => $this->session->userdata('CASE'),
+            'PSU' => $this->session->userdata('PSU'),
+            'COOL' => $this->session->userdata('COOL')
+        ];
+        $this->buySet($data['CPU']);
+        $this->buySet($data['MB']);
+        $this->buySet($data['RAM']);
+        $this->buySet($data['VGA']);
+        $this->buySet($data['HDD']);
+        $this->buySet($data['SSD']);
+        $this->buySet($data['CASE']);
+        $this->buySet($data['PSU']);
+        $this->buySet($data['COOL']);
         redirect('/');
 
     }
 
-    public function deleteCart($id){
-        $cart = $this->session->userdata('cart');
-        $newCart[] = "";
-        foreach ($cart as $item){
-            if(!($item == $id)){
-                $newCart[] = $item;
+    private function exists($id)
+    {
+        $cart = array_values(unserialize($this->session->userdata('cart')));
+        for ($i = 0; $i < count($cart); $i ++) {
+            if ($cart[$i]['id'] == $id) {
+                return $i;
             }
         }
-        $this->session->unset_userdata('cart');
-        $this->session->set_userdata('cart',$newCart);
-        redirect('/');
+        return -1;
+    }
+
+    private function total() {
+        $items = array_values(unserialize($this->session->userdata('cart')));
+        $s = 0;
+        foreach ($items as $item) {
+            $s += $item['price'] * $item['quantity'];
+        }
+        return $s;
     }
 
 }
